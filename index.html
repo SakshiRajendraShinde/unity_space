@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Unity Space | Reusable, Modular VTVL Drone & Rocket Testing Platform</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Turret+Road:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- HOW TO FIND CODE: search this file for "PAGE:" (each page), "SECTION:" (parts of a page) or "=====" (navbar, footer, pop-ups). -->
+    <!-- ===== NAVBAR (logo, links, day/night button, 3-dot menu, unfolding 3-line menu) ===== -->
+    <header id="hd" class="hm">
+        <div class="w nav">
+            <a class="logo" href="#home"><img src="assets/unity-space-logo.png" alt="Unity Space logo">UNITY SPACE</a>
+            <div class="links"><a href="#media">Media</a><a href="#partners">Partners</a><a href="#projects">Projects</a><a href="#flightlog">Flight Log</a><a href="#about">About</a><a href="#team">Team</a></div>
+            <a class="btn" href="#contact">Contact us</a><button class="tgl" id="theme" type="button" aria-label="Switch to dark mode" aria-pressed="false"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+            <div class="unf" id="unf">
+                <div class="unfl" id="unfl"><a href="#media">Media</a><a href="#partners">Partners</a><a href="#projects">Projects</a><a href="#flightlog">Flight Log</a><a href="#about">About</a><a href="#team">Team</a><a href="#contact">Contact us</a></div>
+                <button class="ham" id="ham" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="unfl"><span></span><span></span><span></span></button></div>
+            <div class="dots3"><button id="mb" aria-label="Menu" aria-expanded="false" aria-controls="mp">&#8942;</button>
+                <div id="mp" class="mpanel"><a href="#media">Media</a><a href="#partners">Partners</a><a href="#projects">Projects</a><a href="#flightlog">Flight Log</a><a href="#about">About</a><a href="#team">Team</a><a href="#contact">Contact us</a></div>
+            </div>
+        </div>
+    </header>
+    <main id="top">
+        <!-- ===== PAGE: FIRST PAGE (hero video + Explore content below it) ===== -->
+        <div class="view" id="v-home">
+            <!-- --- SECTION: HERO (first screen, background video) --- -->
+            <section class="hero">
+                <video id="hv" class="hbg" autoplay muted loop playsinline preload="auto" poster="assets/background_video.mp4" aria-label="Earth seen from space at sunrise"><source src="assets/background_video.mp4" type="video/mp4"><source src="assets/background_video.mp4" type="video/mp4"></video>
+                <div class="hshade"></div>
+                <!-- Upcoming events slider card (top right of the first page). It changes slide every 2 seconds. Edit the three slides below. -->
+                <aside class="events" aria-label="Upcoming events" aria-roledescription="carousel">
+                    <!-- The logo drawing is defined once here and reused in every slide -->
+                    <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+            <linearGradient id="evG" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#ffb347"/><stop offset=".55" stop-color="#ff6a00"/><stop offset="1" stop-color="#b78cff"/></linearGradient>
+            <symbol id="evLogo" viewBox="0 0 120 120">
+              <path d="M24 98 L58 22 Q60 18 64 22 L96 92" fill="none" stroke="url(#evG)" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M30 94 L58 30" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="3" stroke-linecap="round"/>
+              <path d="M70 62 C92 70 104 84 98 96 C92 106 78 98 82 88 C86 78 104 90 100 104" fill="none" stroke="url(#evG)" stroke-width="5" stroke-linecap="round"/>
+            </symbol></defs></svg>
+                    <div class="ev-track" id="evTrack">
+                        <!-- Slide 1 -->
+                        <div class="ev-slide">
+                            <div class="ev-art" aria-hidden="true"><svg class="ev-logo" viewBox="0 0 120 120"><use href="#evLogo"/></svg></div>
+                            <div class="ev-text">
+                                <h2>AIC Innovation</h2>
+                                <p>Upcoming event &middot; date to be announced</p>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="ev-slide">
+                            <div class="ev-art" aria-hidden="true"><svg class="ev-logo" viewBox="0 0 120 120"><use href="#evLogo"/></svg></div>
+                            <div class="ev-text">
+                                <h2>ADT Innovation</h2>
+                                <p>Upcoming event &middot; date to be announced</p>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="ev-slide">
+                            <div class="ev-art" aria-hidden="true"><svg class="ev-logo" viewBox="0 0 120 120"><use href="#evLogo"/></svg></div>
+                            <div class="ev-text">
+                                <h2>Phaltan Innovation</h2>
+                                <p>Upcoming event &middot; date to be announced</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ev-dots" id="evDots"><button type="button" class="on" aria-label="Show event 1"></button><button type="button" aria-label="Show event 2"></button><button type="button" aria-label="Show event 3"></button></div>
+                </aside>
+                <div class="w g">
+                    <div>
+                        <p class="eb">Fly it, land it, fly it again.</p>
+                        <p>Test vertical take-off and vertical landing hardware on one modular platform, without rebuilding a test rig every time your design changes.</p>
+                        <a class="btn" href="#explore">Explore more</a></div>
+                </div>
+            </section>
+            <!-- --- SECTION: Explore Unity Space --- -->
+            <section id="xp">
+                <div class="w">
+                    <p class="eb">Explore UNITY SPACE</p>
+                    <h2>Why we exist, and where we are heading.</h2>
+                    <div class="two" style="margin-top:36px">
+                        <div class="card mv">
+                            <h3>Our mission</h3>
+                            <p>To make powered landings routine. We give every engineering team a reusable, modular VTVL test platform, so drones and rocket stages can be flown, landed and flown again without building a new test stand each time.</p>
+                        </div>
+                        <div class="card mv">
+                            <h3>Our vision</h3>
+                            <p>A future where reusable flight is the default. Any team, from a university lab to a launch startup, takes a vehicle from its first hop to a precise landing on hardware that is built to be reused.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr style="border: none; height: 2px; background: linear-gradient(to right, #faa308 0%, transparent 100%);">
+
+            <!-- --- SECTION: Gallery --- -->
+            <section>
+                <div class="w">
+                    <h2>Gallery</h2>
+                    <p class="lead">A look at the platform, the test range and the team behind it.</p>
+                    <h3 style="margin-top:36px">Photos</h3>
+                    <div class="gal" id="gal">
+                        <!-- Gallery photos (ISRO example images). One <figure> per photo. -->
+                        <!-- Card 1: Chetak 1 -->
+                        <figure>
+                            <div class="gi"><img class="isr" src="assets/chetak-2.png?width=900" alt="Chetak 1 " loading="lazy" decoding="async"></div>
+                            <figcaption>Chetak Series MK-I</figcaption>
+                        </figure>
+                        <!-- Card 2: Chetak 2 -->
+                        <figure>
+                            <div class="gi"><img class="isr" src="assets/chetak-3.png?width=900" alt="Chetak 2 " loading="lazy" decoding="async"></div>
+                            <figcaption>Chetak Series MK-II</figcaption>
+                        </figure>
+                        <!-- Card 3: Chetak 3  -->
+                        <figure>
+                            <div class="gi"><img class="isr" src="assets/Screenshot 2026-10-28 150212.png?width=900" alt="Chetak 3 " loading="lazy" decoding="async"></div>
+                            <figcaption>Chetak Series MK-III</figcaption>
+                        </figure>
+                        <!-- Card 4: Rocket Model Design -->
+                        <figure>
+                            <div class="gi"><img class="isr" src="assets/WhatsApp Image 2026-10-27 at 19.19.23.jpeg?width=900" alt="Rocket Model Design" loading="lazy" decoding="async"></div>
+                            <figcaption>Rocket Model Design</figcaption>
+                        </figure>
+                        <!-- Card 5: Rocket CAD Design -->
+                        <figure>
+                            <div class="gi"><img class="isr" src="assets/Rocket part design.jpeg?width=900" alt="Rocket CAD Design" loading="lazy" decoding="async"></div>
+                            <figcaption>Rocket CAD Design</figcaption>
+                        </figure>
+                        <!-- Card 6: The team at the range -->
+                        <figure>
+                            <div class="gi"><img class="isr" src="assets/Team.jpeg" alt="The team at the range" loading="lazy" decoding="async"></div>
+                            <figcaption>The team at the range</figcaption>
+                        </figure>
+                    </div>
+                    <h3 style="margin-top:56px">Videos</h3>
+                    <div class="vids" id="vids">
+                        <!-- Video tiles. data-title / data-isr feed the pop-up player. -->
+                        <!-- Card 1: Landing burn replay -->
+                        <button class="vt" data-k="0" data-title="Landing burn replay" data-isr="https://commons.wikimedia.org/wiki/Special:FilePath/SPACE_PORT.jpg?width=900" data-video="assets/CHETAK-3 Video.mp4"><span class="th"><video src="assets/CHETAK-3 Video.mp4" poster="assets/chetak-3-poster.jpg" muted loop playsinline autoplay preload="metadata"></video></span><span class="m"><b class="pl-1">Flight Test</b><small></small></span></button>
+                        <!-- Card 2: Hover test, tethered -->
+                        <button class="vt" data-k="1" data-title="Hover test, tethered" data-isr="https://commons.wikimedia.org/wiki/Special:FilePath/GSLV_Mk-III.jpg?width=900" data-video="assets/telemetry data..mp4"><span class="th"><video src="assets/telemetry data..mp4" poster="assets/telemetry data..mp4" muted loop playsinline autoplay preload="metadata"></video></span><span class="m"><b class="pl-1">Data Aquisition</b><small></small></span></button>
+                        <!-- Card 3: Building the modular platform -->
+                        <button class="vt" data-k="2" data-title="Building the modular platform" data-isr="https://commons.wikimedia.org/wiki/Special:FilePath/ISRO_PSLV_%282020%29_01.jpg?width=900" data-video="assets/WhatsApp Video 2026-10-27 at 19.44.40.mp4"><span class="th"><video src="assets/WhatsApp Video 2026-10-27 at 19.44.40.mp4" poster="assets/chetak-3-poster.jpg" muted loop playsinline autoplay preload="metadata"></video></span><span class="m"><b class="pl-1">Rocket part manufacturing</b><small></small></span></button>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- ===== PAGE: MEDIA ===== -->
+        <div class="view" id="v-media" hidden>
+            <!-- --- SECTION: Unity Space · Media archive --- -->
+            <section class="ph">
+                <div class="w">
+                    <p class="eb">UNITY SPACE · Media archive</p>
+                    <h1>Media</h1>
+                    <p class="lead">A visual record of our builds, tests, flights, engineering work and team activities.</p>
+                </div>
+            </section>
+            <!-- --- SECTION: Engineering in motion --- -->
+            <section class="soft">
+                <div class="w">
+                    <p class="eb">Engineering in motion</p>
+                    <h2>From Workshop to Flight</h2>
+                    <p class="lead">The Unity Space media archive documents the work behind our aerospace programs, from fabrication and electronics integration to testing, flight preparation and actual flight demonstrations.</p>
+
+                </div>
+            </section>
+            <!-- --- SECTION: Reference archive · NASA flight research --- -->
+            <section>
+                <div class="w">
+                    <p class="eb">Reference archive · UNITY SPACE flight research</p>
+                    <h2>Flight Test, Frame by Frame</h2>
+                    <p class="lead">Explore real-world research aircraft in flight and the teams preparing each mission. Hover, focus or select a frame to expand it.</p>
+                    <div class="ftt" id="ftt" aria-label="NASA flight test image archive">
+                        <!-- NASA flight-test frames. One <a> per frame; the first one starts open (class "on"). -->
+                        <!-- Card 1: CHETAK-3 Launch -->
+                        <a class="fta on" href="assets/chetak-3.png" target="_blank" rel="noopener noreferrer" aria-label="CHETAK-3 Launch"><img src="assets/chetak-3.png" alt="NASA X-59 flying over the Mojave Desert with an F/A-18 chase aircraft" loading="eager" decoding="async"><span class="num"></span>
+                            <span class="cap"><b>CHETAK-3 Launch</b><small>Photo: Chetak / UNITY SPACE</small></span>
+                        </a>
+                        <!-- Card 2: CHETAK-1 TEST -->
+                        <a class="fta" href="assets/flight_chetak-1.png" target="_blank" rel="noopener noreferrer" aria-label="CHETAK-1 TEST"><img src="assets/flight_chetak-1.png" alt="NASA X-59 and F/A-18 research aircraft flying in formation" loading="lazy" decoding="async"><span class="num"></span>
+                            <span class="cap"><b>CHETAK-1 TEST</b><small>Photo: Chetak / UNITY SPACE</small></span>
+                        </a>
+                        <!-- Card 3: CHETAK-2 Launch -->
+                        <a class="fta" href="assets/chetak-2.png" target="_blank" rel="noopener noreferrer" aria-label="CHETAK-2 Launch"><img src="assets/chetak-2.png" alt="NASA X-59 low-boom flight demonstrator during a research flight" loading="lazy" decoding="async"><span class="num"></span>
+                            <span class="cap"><b>CHETAK-2 Launch</b><small>Photo: Chetak / UNITY SPACE</small></span>
+                        </a>
+                        <!-- Card 4: Team length actively working -->
+                        <a class="fta" href="assets/Team.jpeg" target="_blank" rel="noopener noreferrer" aria-label="Team length actively working"><img src="assets/Team.jpeg" alt="NASA X-59 flying with an F/A-18 monitoring aircraft during flight testing" loading="lazy" decoding="async"><span class="num"></span>
+                            <span class="cap"><b>Team length actively working</b><small>Photo: Team / UNITY SPACE</small></span>
+                        </a>
+                        <!-- Card 5: Rocket CAD Design -->
+                        <a class="fta" href="assets/Screenshot 2026-10-30 100530.png" target="_blank" rel="noopener noreferrer" aria-label="Rocket CAD Design"><img src="assets/Screenshot 2026-10-30 100530.png" alt="NASA X-59 in profile during supersonic flight testing" loading="lazy" decoding="async"><span class="num"></span>
+                            <span class="cap"><b>Rocket CAD Design</b><small>Photo: CAD / UNITY SPACE</small></span>
+                        </a>
+                        <!-- Card 6: Rocket Performance Test -->
+                        <a class="fta" href="assets/Screenshot 2026-10-28 150212.png" target="_blank" rel="noopener noreferrer" aria-label="Rocket Performance Test"><img src="assets/Screenshot 2026-10-28 150212.png" alt="NASA X-59 undergoing a supersonic research flight over California" loading="lazy" decoding="async"><span class="num"></span>
+                            <span class="cap"><b>Rocket Performance Test</b><small>Photo: Rocket / UNITY SPACE</small></span>
+                        </a>
+                        <!-- Card 7: Events & Demonstration -->
+                        <a class="fta" href="assets/team_photo.jpeg" target="_blank" rel="noopener noreferrer" aria-label="Events & Demonstration"><img src="assets/team_photo.jpeg" alt="NASA X-59 research aircraft in flight against a clear sky" loading="lazy" decoding="async"><span class="num"></span>
+                            <span class="cap"><b>Events & Demonstration</b><small>Photo: Team / UNITY SPACE</small></span>
+                        </a>
+                        <!-- Card 8: Rocket parts design -->
+                        <a class="fta" href="assets/Rocket part design.jpeg" target="_blank" rel="noopener noreferrer" aria-label="Rocket parts design"><img src="assets/Rocket part design.jpeg" alt="NASA X-59 flying above mountain ridges near Armstrong Flight Research Center" loading="lazy" decoding="async"><span class="num"></span>
+                            <span class="cap"><b>Rocket parts design</b><small>Photo: Rocket / UNITY SPACE</small></span>
+                        </a>
+
+                    </div>
+
+                </div>
+            </section>
+            <!-- --- SECTION: Media filter buttons and cards --- -->
+            <section class="soft">
+                <div class="w">
+                    <div class="mfb" role="tablist" aria-label="Media categories"><button class="mf on" data-f="all" role="tab" aria-selected="true">All</button><button class="mf" data-f="build" role="tab" aria-selected="false">Build</button><button class="mf" data-f="test" role="tab" aria-selected="false">Test</button>
+                        <button class="mf" data-f="flight" role="tab" aria-selected="false">Flight</button><button class="mf" data-f="team" role="tab" aria-selected="false">Team</button><button class="mf" data-f="events" role="tab" aria-selected="false">Events</button></div>
+                    <div class="mgr" id="mg">
+                        <!-- Media cards. data-c is the filter category (build / test / flight / team / events). -->
+                        <!-- Card 1: Experimental Rocket Hardware -->
+                        <a class="mc lk" href="#chetak" data-c="build">
+                            <div class="fi"><img class="isr" src="assets/WhatsApp Image 2026-10-27 at 19.44.29.jpeg?width=900" alt="Example image: ISRO rocket" loading="lazy" decoding="async"><img src="assets/WhatsApp Image 2026-10-27 at 19.44.29.jpeg" alt="Experimental Rocket Hardware"
+                                    loading="lazy" decoding="async"></div>
+                            <div class="cp">
+                                <h3>Experimental Rocket Hardware</h3>
+                                <p>Hardware development from Unity Space's experimental rocket program.</p>
+                            </div>
+                        </a>
+                        <!-- Card 2: Flight Demonstration -->
+                        <a class="mc lk" href="#chetak" data-c="flight">
+                            <div class="fi"><img class="isr" src="assets/chetak-3.png?width=900" alt="Example image: ISRO rocket" loading="lazy" decoding="async"><img src="assets/chetak-3.png" alt="Flight Demonstration" loading="lazy" decoding="async"></div>
+                            <div class="cp">
+                                <h3>Flight Demonstration</h3>
+                                <p>Unity Space's Chetak program includes MK-I and MK-II flight demonstrations.</p>
+                            </div>
+                        </a>
+                        <!-- Card 3: Electric VTVL Airframe -->
+                        <a class="mc lk" href="#delta" data-c="build">
+                            <div class="fi"><img class="isr" src="assets/flight_chetak-1.png?height=900" alt="Example image: ISRO rocket" loading="lazy" decoding="async"><img src="assets/flight_chetak-1.png" alt="Electric VTVL Airframe" loading="lazy" decoding="async"></div>
+                            <div class="cp">
+                                <h3>Electric VTVL Airframe</h3>
+                                <p>The DELTA experimental flight platform is designed to validate flight-control, avionics, sensing and telemetry systems.</p>
+                            </div>
+                        </a>
+                        <!-- Card 4: CAD & System Development -->
+                        <a class="mc lk" href="#delta" data-c="build">
+                            <div class="fi"><img class="isr" src="assets/WhatsApp Image 2026-10-27 at 19.19.23.jpeg?width=900" alt="Example image: ISRO rocket" loading="lazy" decoding="async"><img src="assets/WhatsApp Image 2026-10-27 at 19.19.23.jpeg" alt="CAD &amp; System Development"
+                                    loading="lazy" decoding="async"></div>
+                            <div class="cp">
+                                <h3>CAD &amp; System Development</h3>
+                                <p>Digital engineering and configuration development of the VTVL demonstrator.</p>
+                            </div>
+                        </a>
+
+                        <!-- Card 5: Ground Testing -->
+                        <article class="mc" data-c="test">
+                            <div class="fi">
+                                <video class="isr" autoplay muted loop playsinline preload="metadata">
+                                    <source src="assets/CHETAK-3 Video.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="cp">
+                                <h3>Ground Testing</h3>
+                                <p>Controlled testing of vehicle, avionics and flight-control systems before flight.</p>
+                            </div>
+                        </article>
+                        <!-- Card 6: Telemetry & Data -->
+                        <a class="mc lk" href="#delta" data-c="test">
+                            <div class="fi">
+                                <video class="isr" autoplay muted loop playsinline preload="metadata">
+                                    <source src="assets/telemetry data..mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="cp">
+                                <h3>Telemetry &amp; Data</h3>
+                                <p>Flight-test data, sensor measurements and telemetry records used for system validation.</p>
+                            </div>
+                        </a>
+                        <!-- Card 7: Pre-Flight Preparation -->
+                        <article class="mc" data-c="flight">
+                            <div class="fi"><img class="isr" src="assets/chetak-2.png?width=900" alt="Pre-Flight Preparation" loading="lazy" decoding="async"></div>
+                            <div class="cp">
+                                <h3>Pre-Flight Preparation</h3>
+                                <p>Vehicle inspection, electronics checks, configuration verification and flight preparation.</p>
+                            </div>
+                        </article>
+                        <!-- Card 11: Engineering Team -->
+                        <article class="mc" data-c="team">
+                            <div class="fi"><img class="isr" src="assets/Team.jpeg" alt="Engineering Team" loading="lazy" decoding="async"></div>
+                            <div class="cp">
+                                <h3>Engineering Team</h3>
+                                <p>Team members working across avionics, embedded systems, GNC, propulsion, structures and manufacturing.</p>
+                            </div>
+                        </article>
+                        <!-- Card 12: Events & Demonstrations -->
+                        <article class="mc" data-c="events">
+                            <div class="fit"><img class="isr" src="assets/team_photo.jpeg" alt="Events &amp; Demonstrations" loading="lazy" decoding="async"></div>
+                            <div class="cp">
+                                <h3>Events &amp; Demonstrations</h3>
+                                <p>Competitions, exhibitions, technical demonstrations and project presentations.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="card" id="mnr" hidden>
+                        <h3>No media in this category yet.</h3>
+                        <p>Verified Unity Space media will be added here as the archive grows.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- ===== PAGE: PARTNERS ===== -->
+        <div class="view" id="v-partners" hidden>
+            <!-- --- SECTION: Unity Space · Partners --- -->
+            <section class="ph">
+                <div class="w">
+                    <p class="eb">UNITY SPACE · Partners</p>
+                    <h1>Partners</h1>
+                </div>
+            </section>
+            <!-- --- SECTION: Support the mission --- -->
+            <section style="padding-top:24px">
+                <div class="w">
+                    <div class="card sp">
+                        <p class="eb">Support the mission</p>
+                        <h2>Help us reach space</h2>
+                        <p class="lead">Our work could not be possible without the donations of generous contributors like you. Whether you&rsquo;re a corporation or an individual, any amount we receive brings us closer to the K&aacute;rm&aacute;n line.</p>
+                        <a class="btn o" href="#contact">Support Unity Space &#8599;</a></div>
+                    <!--<div style="margin-top:56px">
+          <p class="eb">Our sponsors</p>
+          <h2>Partners in the Mission</h2>
+          <p class="note" style="margin-top:0">Sponsor logos will be added here as partnerships are confirmed.</p>
+          <div class="mq" role="region" aria-label="Sponsor logo placeholders">
+            <div class="mt" id="mt">
+              
+              <ul aria-label="12 sponsor logo placeholders">
+                <li><img src="assets/unity-space-logo.png" alt="Sponsor logo placeholder"></li>
+                <li><img src="assets/unity-space-logo.png" alt="Sponsor logo placeholder"></li>
+                <li><img src="assets/unity-space-logo.png" alt="Sponsor logo placeholder"></li>
+                <li><img src="assets/unity-space-logo.png" alt="Sponsor logo placeholder"></li>
+                <li><img src="assets/unity-space-logo.png" alt="Sponsor logo placeholder"></li>
+                <li><img src="assets/unity-space-logo.png" alt="Sponsor logo placeholder"></li>
+                <li><img src="assets/unity-space-logo.png" alt="Sponsor logo placeholder"></li>
+                <li><img src="assets/unity-space-logo.png" alt="Sponsor logo placeholder"></li>
+                <li><img src="assets/unity-space-logo.png" alt="Sponsor logo placeholder"></li>
+                <li><img src="assets/unity-space-logo.png" alt="Sponsor logo placeholder"></li>
+                <li><img src="assets/unity-space-logo.png" alt="Sponsor logo placeholder"></li>
+                <li><img src="assets/unity-space-logo.png" alt="Sponsor logo placeholder"></li>
+              </ul>
+              <ul aria-hidden="true">
+                <li><img src="assets/unity-space-logo.png" alt=""></li>
+                <li><img src="assets/unity-space-logo.png" alt=""></li>
+                <li><img src="assets/unity-space-logo.png" alt=""></li>
+                <li><img src="assets/unity-space-logo.png" alt=""></li>
+                <li><img src="assets/unity-space-logo.png" alt=""></li>
+                <li><img src="assets/unity-space-logo.png" alt=""></li>
+                <li><img src="assets/unity-space-logo.png" alt=""></li>
+                <li><img src="assets/unity-space-logo.png" alt=""></li>
+                <li><img src="assets/unity-space-logo.png" alt=""></li>
+                <li><img src="assets/unity-space-logo.png" alt=""></li>
+                <li><img src="assets/unity-space-logo.png" alt=""></li>
+                <li><img src="assets/unity-space-logo.png" alt=""></li>
+              </ul>
+            </div>
+          </div>
+        </div>-->
+                </div>
+            </section>
+            <!-- --- SECTION: Partner with us --- -->
+            <section id="sponsor-form">
+                <div class="w cg">
+                    <div>
+                        <p class="eb">Partner with us</p>
+                        <h2>Let&rsquo;s build the future together.</h2>
+                        <p class="lead">If you would like to sponsor a project, support a student team or discuss a collaboration, send us a message.</p>
+                    </div>
+                    <form class="cf" action="https://formsubmit.co/unityspace70@gmail.com" method="POST"><input type="hidden" name="_subject" value="Unity Space sponsorship enquiry"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_template" value="table">
+                        <div class="row">
+                            <div><label for="sF">First Name</label><input id="sF" name="first_name" required></div>
+                            <div><label for="sL">Last Name</label><input id="sL" name="last_name" required></div>
+                        </div>
+                        <div><label for="sE">Email</label><input id="sE" name="email" type="email" required></div>
+                        <div><label for="sM">Message</label><textarea id="sM" name="message" required></textarea></div>
+                        <button class="btn" type="submit">Send Message &#8599;</button>
+                        <p class="fs" role="status"></p>
+                    </form>
+                </div>
+            </section>
+        </div>
+        <!-- ===== PAGE: PROJECTS (headings + See more) ===== -->
+        <div class="view" id="v-projects" hidden>
+            <!-- --- SECTION: Unity Space · Projects --- -->
+            <section class="ph">
+                <div class="w">
+                    <p class="eb">UNITY SPACE · Projects</p>
+                    <h1>Our Projects</h1>
+                    <p class="lead">From experimental rockets to reusable vertical flight platforms, our projects are built around practical aerospace engineering and flight testing.</p>
+                </div>
+            </section>
+
+            <hr style="border: none; height: 2px; background: linear-gradient(to right, #faa308 0%, transparent 100%);">
+
+            <!-- --- SECTION: Program blocks (CHETAK, DELTA, HELIX) --- -->
+            <section style="padding-top:32px">
+                <div class="w">
+                    <div class="vx" id="pst">
+                        <!-- Program blocks: heading, vision, mission and the project cards. -->
+                        <!-- --- SECTION: CHETAK --- -->
+                        <section class="pb2" id="p-chetak">
+                            <h2>CHETAK</h2>
+                            <p class="lead">Experimental Rocket Development</p>
+                            <div class="ib">
+                                <div><small>Our vision</small>
+                                    <h3>Building Through Experimentation</h3>
+                                    <p>To develop practical rocketry capabilities through experimentation, engineering, testing and continuous learning.</p>
+                                </div>
+                                <div><small>Our mission</small>
+                                    <h3>Engineering Beyond Theory</h3>
+                                    <p>To design, develop and test experimental rocket systems while building hands-on aerospace engineering experience.</p>
+                                </div>
+                            </div>
+                            <!-- Project cards (click a card to open it in focus) -->
+                            <div class="pg">
+                                <!-- Card 1: item -->
+                                <div class="pc lk" role="button" tabindex="0" data-k="0" data-progname="CHETAK" data-label="Development Series · 01" data-title="CHETAK 1" data-text="The first vehicle in the CHETAK series, built to establish the basic rocket architecture, airframe and flight hardware."
+                                    data-focus="Vehicle architecture, airframe construction and basic avionics integration." data-dev="Ground checks and early flight-test learning that shaped the next iteration." data-vision="To develop practical rocketry capabilities through experimentation, engineering, testing and continuous learning."
+                                    data-mission="To design, develop and test experimental rocket systems while building hands-on aerospace engineering experience." data-isr="https://commons.wikimedia.org/wiki/Special:FilePath/GSLV_Mk-III.jpg?width=900" data-un="https://images.unsplash.com/photo-1517976547714-720226b864c1?auto=format&amp;fit=crop&amp;w=1400&amp;q=85">
+                                    <div class="fi"><img class="isr" src="assets/flight_chetak-1.png?height=900" alt="Example image: ISRO rocket" loading="lazy" decoding="async"><img src="assets/flight_chetak-1.png" alt="CHETAK 1" loading="lazy" decoding="async"></div>
+                                    <div class="cp"><small class="pj">Development Series · 01</small>
+                                        <h3>CHETAK 1</h3>
+                                        <p>The first vehicle in the CHETAK series, built to establish the basic rocket architecture, airframe and flight hardware.</p>
+                                    </div>
+                                </div>
+                                <!-- Card 2: item -->
+                                <div class="pc lk" role="button" tabindex="0" data-k="1" data-progname="CHETAK" data-label="Development Series · 02" data-title="CHETAK 2" data-text="Builds on CHETAK 1 with improved structure, electronics and recovery, and includes the MK-I and MK-II flight demonstrations."
+                                    data-focus="Propulsion integration, avionics refinement and recovery." data-dev="Bench testing and flight demonstrations used to validate each change." data-vision="To develop practical rocketry capabilities through experimentation, engineering, testing and continuous learning."
+                                    data-mission="To design, develop and test experimental rocket systems while building hands-on aerospace engineering experience." data-isr="https://commons.wikimedia.org/wiki/Special:FilePath/SPACE_PORT.jpg?width=900" data-un="https://images.unsplash.com/photo-1457364887197-9150188c107b?auto=format&amp;fit=crop&amp;w=1400&amp;q=85">
+                                    <div class="fi"><img class="isr" src="assets/chetak-2.png?width=900" alt="Example image: ISRO rocket" loading="lazy" decoding="async"><img src="assets/chetak-2.png" alt="CHETAK 2" loading="lazy" decoding="async"></div>
+                                    <div class="cp"><small class="pj">Development Series · 02</small>
+                                        <h3>CHETAK 2</h3>
+                                        <p>Builds on CHETAK 1 with improved structure, electronics and recovery, and includes the MK-I and MK-II flight demonstrations.</p>
+                                    </div>
+                                </div>
+                                <!-- Card 3: item -->
+                                <div class="pc lk" role="button" tabindex="0" data-k="2" data-progname="CHETAK" data-label="Development Series · 03" data-title="CHETAK 3" data-text="The latest development stage, bringing together the lessons from earlier flights." data-focus="System integration, reliability and data collection."
+                                    data-dev="Subsystem validation and flight-test preparation." data-vision="To develop practical rocketry capabilities through experimentation, engineering, testing and continuous learning." data-mission="To design, develop and test experimental rocket systems while building hands-on aerospace engineering experience."
+                                    data-isr="https://commons.wikimedia.org/wiki/Special:FilePath/PSLV_Launch_Vehicle_Model.jpg?width=900" data-un="https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?auto=format&amp;fit=crop&amp;w=1400&amp;q=85"
+                                    data-video="assets/chetak-3-video.mp4">
+                                    <div class="fi"><img src="assets/chetak-3.png" poster="assets/chetak-3-poster.jpg" muted loop playsinline autoplay preload="metadata" />
+                                    </div>
+                                    <div class="cp"><small class="pj">Development Series · 03</small>
+                                        <h3>CHETAK 3</h3>
+                                        <p>The latest development stage with parachute ejection, bringing together the lessons from earlier flights.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </section>
+
+
+                        <!-- --- SECTION: DELTA --- -->
+                        <section class="pb2" id="p-delta">
+                            <hr style="border: none; height: 2px; background: linear-gradient(to right, #faa308 0%, transparent 100%);">
+
+                            <h2>DELTA</h2>
+                            <p class="lead">Thrust Vector Control Development</p>
+                            <div class="ib">
+                                <div><small>Our vision</small>
+                                    <h3>Advancing Flight Control</h3>
+                                    <p>To explore advanced rocket control technologies and improve the understanding of flight stability and directional control.</p>
+                                </div>
+                                <div><small>Our mission</small>
+                                    <h3>Developing Precision Systems</h3>
+                                    <p>To design and experiment with a servo-actuated thrust vector control mechanism for experimental rocket systems.</p>
+                                </div>
+                            </div>
+                            <!-- Project cards (click a card to open it in focus) -->
+                            <!--<div class="pg">
+
+                                <div class="pc lk" role="button" tabindex="0" data-k="0" data-progname="DELTA" data-label="DELTA · FLIGHT TESTING" data-title="Flight Demonstration" data-text="DELTA is an electric vertical-flight platform built to validate integrated flight control, avionics, sensing and telemetry."
+                                    data-vision="To explore advanced rocket control technologies and improve the understanding of flight stability and directional control." data-mission="To design and experiment with a servo-actuated thrust vector control mechanism for experimental rocket systems."
+                                    data-isr="https://commons.wikimedia.org/wiki/Special:FilePath/GSLV_Mk-III.jpg?width=900" data-un="https://images.unsplash.com/photo-1517976547714-720226b864c1?auto=format&amp;fit=crop&amp;w=1400&amp;q=85">
+                                    <div class="fi"><img class="isr" src="https://commons.wikimedia.org/wiki/Special:FilePath/GSLV_Mk-III.jpg?width=900" alt="Example image: ISRO rocket" loading="lazy" decoding="async"><img src="https://images.unsplash.com/photo-1517976547714-720226b864c1?auto=format&fit=crop&w=1000&q=85"
+                                            alt="Flight Demonstration" loading="lazy" decoding="async"></div>
+                                    <div class="cp"><small class="pj">DELTA · FLIGHT TESTING</small>
+                                        <h3>Flight Demonstration</h3>
+                                        <p>DELTA is an electric vertical-flight platform built to validate integrated flight control, avionics, sensing and telemetry.</p>
+                                    </div>
+                                </div>
+
+                                <div class="pc lk" role="button" tabindex="0" data-k="1" data-progname="DELTA" data-label="DELTA · DESIGN" data-title="CAD Render" data-text="The CAD model brings together airframe layout, component packaging and control hardware for assembly and interface reviews before fabrication."
+                                    data-vision="To explore advanced rocket control technologies and improve the understanding of flight stability and directional control." data-mission="To design and experiment with a servo-actuated thrust vector control mechanism for experimental rocket systems."
+                                    data-isr="https://commons.wikimedia.org/wiki/Special:FilePath/ROCKET_MODEL.jpg?width=900" data-un="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&amp;fit=crop&amp;w=1400&amp;q=85">
+                                    <div class="fi"><img class="isr" src="https://commons.wikimedia.org/wiki/Special:FilePath/ROCKET_MODEL.jpg?width=900" alt="Example image: ISRO rocket" loading="lazy" decoding="async"><img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1000&q=85"
+                                            alt="CAD Render" loading="lazy" decoding="async"></div>
+                                    <div class="cp"><small class="pj">DELTA · DESIGN</small>
+                                        <h3>CAD Render</h3>
+                                        <p>The CAD model brings together airframe layout, component packaging and control hardware for assembly and interface reviews before fabrication.</p>
+                                    </div>
+                                </div>
+                            </div>-->
+
+
+                        </section>
+
+
+
+                        <!-- --- SECTION: HELIX --- -->
+                        <section class="pb2" id="p-helix">
+                            <hr style="border: none; height: 2px; background: linear-gradient(to right, #faa308 0%, transparent 100%);">
+
+                            <h2>HELIX</h2>
+                            <p class="lead">Flight Computer and Telemetry Systems</p>
+                            <div class="ib">
+                                <div><small>Our vision</small>
+                                    <h3>Intelligent Aerospace Systems</h3>
+                                    <p>To build reliable electronic and computational systems that support experimental rocket development and flight testing.</p>
+                                </div>
+                                <div><small>Our mission</small>
+                                    <h3>Connecting Data With Flight</h3>
+                                    <p>To develop flight computer, telemetry and data acquisition systems for monitoring and understanding rocket flight behaviour.</p>
+                                </div>
+                            </div>
+                            <!-- Project cards (click a card to open it in focus) -->
+                            <div class="pg">
+                                <!-- Card 1: item -->
+                                <div class="pc lk" role="button" tabindex="0" data-k="0" data-progname="HELIX" data-label="HELIX · FLIGHT TESTING" data-title="Flight Demonstration" data-text="HELIX develops flight-computer and telemetry systems to monitor experimental rocket flights and support post-test data review."
+                                    data-vision="To build reliable electronic and computational systems that support experimental rocket development and flight testing." data-mission="To develop flight computer, telemetry and data acquisition systems for monitoring and understanding rocket flight behaviour."
+                                    data-isr="https://commons.wikimedia.org/wiki/Special:FilePath/GSLV_Mk-III.jpg?height=1200" data-un="https://images.unsplash.com/photo-1517976547714-720226b864c1?auto=format&amp;fit=crop&amp;w=1400&amp;q=85">
+                                    <div class="fi"><img class="isr" src="assets/chetak-3.png?height=1200" alt="Example image: ISRO rocket" loading="lazy" decoding="async"><img src="assets/chetak-3.png" alt="Flight Demonstration" loading="lazy" decoding="async"></div>
+                                    <div class="cp"><small class="pj">HELIX · FLIGHT TESTING</small>
+                                        <h3>Flight Demonstration</h3>
+                                        <p>HELIX develops flight-computer and telemetry systems to monitor experimental rocket flights and support post-test data review.</p>
+                                    </div>
+                                </div>
+                                <!-- Card 2: item -->
+                                <div class="pc lk" role="button" tabindex="0" data-k="1" data-progname="HELIX" data-label="HELIX · DESIGN" data-title="CAD Render" data-text="The CAD layout reviews packaging and interfaces for flight-computer, sensor and telemetry hardware used in rocket testing."
+                                    data-vision="To build reliable electronic and computational systems that support experimental rocket development and flight testing." data-mission="To develop flight computer, telemetry and data acquisition systems for monitoring and understanding rocket flight behaviour."
+                                    data-isr="https://commons.wikimedia.org/wiki/Special:FilePath/ROCKET_MODEL.jpg?width=900" data-un="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&amp;fit=crop&amp;w=1400&amp;q=85">
+                                    <div class="fi"><img class="isr" src="assets/rocket_CAD.png?height=900" alt="Example image: ISRO rocket" loading="lazy" decoding="async"><img src="assets/rocket_CAD.png" alt="CAD Render" loading="lazy" decoding="async"></div>
+                                    <div class="cp"><small class="pj">HELIX · DESIGN</small>
+                                        <h3>CAD Render</h3>
+                                        <p>The CAD layout reviews packaging and interfaces for flight-computer, sensor and telemetry hardware used in rocket testing.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- ===== PAGE: ABOUT ===== -->
+        <div class="view" id="v-about" hidden>
+            <!-- --- SECTION: Team · About --- -->
+            <section class="ph abh" style="background:linear-gradient(rgba(255,255,255,.84),rgba(255,255,255,.96)),url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=2200&q=85') center/cover,#fff4dc">
+                <div class="w">
+                    <p class="eb">Team · About</p>
+                    <h1>About Unity Space</h1>
+                </div>
+            </section>
+            <!-- --- SECTION: Our story --- -->
+            <section>
+                <div class="w ab">
+                    <div>
+                        <p class="eb">Our story</p>
+                        <h2>Turning curiosity into aerospace.</h2>
+                        <p>Unity Space is an aerospace innovation initiative developing reusable, modular VTVL testing platforms for drones and rockets.</p>
+                        <p>We aim to make aerospace testing more affordable, accessible and efficient by enabling teams to test and validate individual technologies without building an entirely new vehicle for every experiment.</p>
+                        <p>Our vision is to accelerate India's aerospace innovation through indigenous engineering, reusable technology and data-driven testing.</p>
+                    </div>
+                    <div class="abimg"><img class="isr" src="assets/Screenshot 2026-10-28 150212.png?width=1000" alt="Example image: ISRO spaceport and rocket" loading="lazy" decoding="async"><img src="assets/Screenshot 2026-10-28 150212.png" alt="Earth and atmosphere from space"
+                            loading="lazy" decoding="async"></div>
+                </div>
+            </section>
+        </div>
+        <!-- ===== PAGE: FLIGHT LOG ===== -->
+        <div class="view" id="v-flightlog" hidden>
+            <!-- --- SECTION: Unity Space · Operations --- -->
+            <section class="ph">
+                <div class="w">
+                    <p class="eb">UNITY SPACE · Operations</p>
+                    <h1>Flight Log</h1>
+                </div>
+
+
+            </section>
+            <!-- --- SECTION: Public log --- -->
+
+
+
+
+            <section>
+                <hr style="border: none; height: 2px; background: linear-gradient(to right, #faa308 0%, transparent 100%);">
+                <div class="w">
+
+                    <p class="eb">Public log</p>
+                    <h2>Flight Program Media</h2>
+                    <p class="lead">Selected visuals from the CHETAK programs, alongside a short orbital reference clip.</p>
+                    <div class="fl" id="fl">
+                        <!-- Flight log cards. data-* attributes feed the focus pop-up. -->
+                        <!-- Card 1: Experimental Rocket Hardware -->
+                        <div class="fc lk" role="button" tabindex="0" data-k="0" data-tag="CHETAK" data-kicker="Hardware · 01" data-title="Experimental Rocket Hardware" data-text="Hardware development within Unity Space&#x27;s experimental rocket program." data-isr="https://commons.wikimedia.org/wiki/Special:FilePath/GSLV_Mk-III.jpg?width=900"
+                            data-un="https://images.unsplash.com/photo-1517976547714-720226b864c1?auto=format&amp;fit=crop&amp;w=1400&amp;q=85">
+                            <div class="fi"><img class="isr" src="assets/chetak-2.png?width=900" alt="Example image: ISRO rocket" loading="lazy" decoding="async"><img src="assets/chetak-2.png" alt="Experimental Rocket Hardware" loading="lazy" decoding="async"><span class="tag">CHETAK</span></div>
+                            <div class="cp"><small>Hardware · 01</small>
+                                <h3>Experimental Rocket Hardware</h3>
+                                <p>Hardware development within Unity Space's experimental rocket program.</p>
+                            </div>
+                        </div>
+                        <!-- Card 2: Flight Demonstration -->
+                        <div class="fc lk" role="button" tabindex="0" data-k="1" data-tag="CHETAK" data-kicker="Flight · 02" data-title="Flight Demonstration" data-text="The CHETAK program includes MK-I and MK-II flight demonstrations." data-isr="https://commons.wikimedia.org/wiki/Special:FilePath/SPACE_PORT.jpg?width=900"
+                            data-un="https://images.unsplash.com/photo-1457364887197-9150188c107b?auto=format&amp;fit=crop&amp;w=1400&amp;q=85">
+                            <div class="fi"><img class="isr" src="assets/Screenshot 2026-10-28 150212.png?width=900" alt="Example image: ISRO rocket" loading="lazy" decoding="async"><img src="assets/Screenshot 2026-10-28 150212.png" alt="Flight Demonstration" loading="lazy"
+                                    decoding="async"><span class="tag">CHETAK</span></div>
+                            <div class="cp"><small>Flight · 02</small>
+                                <h3>Flight Demonstration</h3>
+                                <p>The CHETAK program includes MK-I and MK-II flight demonstrations.</p>
+                            </div>
+                        </div>
+                        <!-- Card 3: item -->
+                        <div class="fc lk" role="button" tabindex="0" data-k="2" data-tag="DELTA" data-kicker="Airframe · 03" data-title="Electric VTVL Airframe" data-text="The DELTA demonstrator is designed to validate flight control, avionics, sensing and telemetry systems."
+                            data-isr="https://commons.wikimedia.org/wiki/Special:FilePath/PSLV_Launch_Vehicle_Model.jpg?width=900" data-un="https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?auto=format&amp;fit=crop&amp;w=1400&amp;q=85">
+                            <div class="fi"><img class="isr" src="assets/flight_chetak-1.png?width=900" alt="Example image: ISRO rocket" loading="lazy" decoding="async"><img src="assets/flight_chetak-1.png" alt="Electric VTVL Airframe" loading="lazy" decoding="async">
+                                <span class="tag">CHETAK</span>
+                            </div>
+                            <div class="cp"><small>Initial · 03</small>
+                                <h3>Initial before Flight testing</h3>
+                                <p>First stage launch of chetak at it's initial stage.</p>
+                            </div>
+                        </div>
+                        <!-- Card 4: CAD & System Development -->
+                        <div class="fc lk" role="button" tabindex="0" data-k="3" data-tag="CHETAK" data-kicker="Design · 04" data-title="CAD &amp; System Development" data-text="Digital engineering and configuration development for the VTVL demonstrator." data-isr="https://commons.wikimedia.org/wiki/Special:FilePath/ROCKET_MODEL.jpg?width=900"
+                            data-un="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&amp;fit=crop&amp;w=1400&amp;q=85">
+                            <div class="fi"><img class="isr" src="assets/Screenshot 2026-10-30 100530.png?width=900" alt="Example image: ISRO rocket" loading="lazy" decoding="async"><img src="assets/Screenshot 2026-10-30 100530.png" alt="CAD &amp; System Development"
+                                    loading="lazy" decoding="async"><span class="tag">CHETAK</span></div>
+                            <div class="cp"><small>Design · 04</small>
+                                <h3>CAD &amp; System Development</h3>
+                                <p>Digital engineering and configuration development for the VTVL demonstrator.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- --- SECTION: Video · Orbital visual --- -->
+            <section class="soft">
+                <div class="w vf">
+                    <div>
+                        <p class="eb">Video · CHETAK 3</p>
+                        <h2>CHETAK 3 Video</h2>
+                        <p class="lead">Video from the CHETAK 3 development series.</p>
+                    </div>
+                    <div>
+                        <video id="flv" controls playsinline preload="metadata" poster="assets/CHETAK-3 Video.mp4" aria-label="CHETAK 3 video"><source src="assets/CHETAK-3 Video.mp4" type="video/mp4">Your browser does not support embedded video playback.</video>
+                        <p class="note" id="flvf" hidden>This video could not be played here. Add the file assets/chetak-3-video.mp4 next to index.html to play it.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- ===== PAGE: TEAM ===== -->
+        <div class="view" id="v-team" hidden>
+            <!-- --- SECTION: Unity Space · The people --- -->
+            <section class="ph">
+                <div class="w">
+                    <p class="eb">UNITY SPACE · The people</p>
+                    <h1>Our Team</h1>
+                </div>
+            </section>
+            <!-- --- SECTION: Meet the team --- -->
+            <section style="padding-top:24px">
+                <div class="w">
+                    <p class="eb">Meet the team</p>
+                    <h2>Meet the members of our team</h2>
+                    <!-- Wide team card: information on the left, image on the right -->
+                    <div class="tm-wide">
+                        <div class="tm-info">
+                            <h2 class="color-orange">Project Mentor</h2>
+                            <p>Dr. Neeta A. Doshi ma'am is an experienced academician and researcher specializing in instrumentation, control systems, and sensor technologies. Her research expertise and innovative approach guide and support our Unity Space
+                                Project.
+                            </p>
+                        </div>
+                        <div class="tp tp-wide"><span class="ti">US</span><img class="isr" src="assets/doshi ma'am.jpeg?width=900" alt="Example image: ISRO rocket" loading="lazy" decoding="async"></div>
+                    </div>
+                    <div class="tf" role="group" aria-label="Filter team members by department"><button class="tfb on" type="button" data-t="all" aria-pressed="true">All</button><button class="tfb" type="button" data-t="electronics" aria-pressed="false">Electronics</button><button class="tfb" type="button" data-t="hardware" aria-pressed="false">Hardware</button>
+                        <button class="tfb" type="button" data-t="software" aria-pressed="false">Software</button><button class="tfb" type="button" data-t="daq-pr" aria-pressed="false">DAQ &amp; Pr</button></div>
+                    <div class="tg" id="tg">
+                        <!-- Team member cards. data-t is the department used by the filter buttons. -->
+                        <!-- Card 1: Abhishek Chavan -->
+                        <article class="tm2" data-t="electronics">
+                            <div class="tp"><span class="ti">AC</span><img src="assets/photo_Abhishek_Chavan-1(250575220180389) (1).jpg" data-fb="https://randomuser.me/api/portraits/men/32.jpg" alt="Abhishek Chavan" loading="lazy" decoding="async"></div>
+                            <div class="tinfo"><span class="tag">Team leader</span>
+                                <h3>Abhishek Chavan</h3>
+                                <div class="tr">Electronics PCB Design &amp; Avionics</div>
+                                <p>Leads the team’s electronics work, focusing on PCB design and avionics.</p>
+                            </div>
+                        </article>
+                        <!-- Card 2: Anisha Waghmode -->
+                        <article class="tm2" data-t="electronics">
+                            <div class="tp"><span class="ti">AW</span><img src="assets/Anisha Waghmode (1).png" data-fb="https://randomuser.me/api/portraits/women/44.jpg" alt="Anisha Waghmode" loading="lazy" decoding="async"></div>
+                            <div class="tinfo">
+                                <h3>Anisha Waghmode</h3>
+                                <div class="tr">Control System &amp; Hardware Design Engineer</div>
+                                <p>Works on control systems and hardware design.</p>
+                            </div>
+                        </article>
+                        <!-- Card 3: Avinash Karche -->
+                        <article class="tm2" data-t="hardware">
+                            <div class="tp"><span class="ti">AK</span><img src="assets/avinash_karche.jpeg" data-fb="https://randomuser.me/api/portraits/men/45.jpg" alt="Avinash Karche" loading="lazy" decoding="async"></div>
+                            <div class="tinfo">
+                                <h3>Avinash Karche</h3>
+                                <div class="tr">Mechanical Designer &amp; Manufacturing</div>
+                                <p>Designs mechanical components and supports manufacturing.</p>
+                            </div>
+                        </article>
+                        <!-- Card 4: Ankita Arjun -->
+                        <article class="tm2" data-t="hardware">
+                            <div class="tp"><span class="ti">AA</span><img src="assets/Ankita Arjun (1).png" data-fb="https://randomuser.me/api/portraits/women/65.jpg" alt="Ankita Arjun" loading="lazy" decoding="async"></div>
+                            <div class="tinfo">
+                                <h3>Ankita Arjun</h3>
+                                <div class="tr">Simulation</div>
+                                <p>Works on simulation for the team’s hardware projects.</p>
+                            </div>
+                        </article>
+                        <!-- Card 5: Masira Tamboli -->
+                        <article class="tm2" data-t="electronics">
+                            <div class="tp"><span class="ti">MT</span><img src="assets/tamboli.png" data-fb="https://randomuser.me/api/portraits/women/68.jpg" alt="Masira Tamboli" loading="lazy" decoding="async"></div>
+                            <div class="tinfo">
+                                <h3>Masira Tamboli</h3>
+                                <div class="tr">PCB Design</div>
+                                <p>Contributes to the design of printed circuit boards.</p>
+                            </div>
+                        </article>
+                        <!-- Card 6: Pratik Pawar -->
+                        <article class="tm2" data-t="daq-pr" data-t="software">
+                            <div class="tp"><span class="ti">PP</span><img src="assets/pratik_pawar.jpeg" data-fb="https://randomuser.me/api/portraits/men/75.jpg" alt="Pratik Pawar" loading="lazy" decoding="async"></div>
+                            <div class="tinfo">
+                                <h3>Pratik Pawar</h3>
+                                <div class="tr">PR &amp; DAQ</div>
+                                <p>Supports public relations and data acquisition.</p>
+                            </div>
+                        </article>
+                        <!-- Card 7: Apurva Mohite -->
+                        <article class="tm2" data-t="daq-pr">
+                            <div class="tp"><span class="ti">AM</span><img src="assets/Apurva_Mohite.jpeg" data-fb="https://randomuser.me/api/portraits/women/26.jpg" alt="Apurva Mohite" loading="lazy" decoding="async"></div>
+                            <div class="tinfo">
+                                <h3>Apurva Mohite</h3>
+                                <div class="tr">Presentation &amp; DAQ</div>
+                                <p>Creates team presentations and contributes to data acquisition.</p>
+                            </div>
+                        </article>
+                        <!-- Card 8: Sarthak Atole -->
+                        <article class="tm2" data-t="hardware">
+                            <div class="tp"><span class="ti">SA</span><img src="assets/sarthak_Atole.jpeg" data-fb="https://randomuser.me/api/portraits/men/52.jpg" alt="Sarthak Atole" loading="lazy" decoding="async"></div>
+                            <div class="tinfo">
+                                <h3>Sarthak Atole</h3>
+                                <div class="tr">CAD &amp; Simulation</div>
+                                <p>Works on computer-aided design and simulation.</p>
+                            </div>
+                        </article>
+                        <!-- Card 9: Sakshi Shinde -->
+                        <article class="tm2" data-t="software">
+                            <div class="tp"><span class="ti">SS</span><img src="assets/Sakshi_Shinde (1).jpeg" data-fb="https://randomuser.me/api/portraits/women/33.jpg" alt="Sakshi Shinde" loading="lazy" decoding="async"></div>
+                            <div class="tinfo">
+                                <h3>Sakshi Shinde</h3>
+                                <div class="tr">Software Development</div>
+                                <p>Develops software for the team’s projects.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- ===== PAGE: CONTACT ===== -->
+        <div class="view" id="v-contact" hidden>
+            <!-- --- SECTION: Contact Us. --- -->
+            <section class="ph">
+                <div class="w">
+                    <h1>Contact Us.</h1>
+                </div>
+            </section>
+            <!-- --- SECTION: Contact form --- -->
+            <section style="padding-top:24px">
+                <div class="w cg">
+                    <div>
+                        <p class="lead">Have a question, partnership idea or something you want to build with us? Send us a message and our team will get back to you.</p>
+                        <div class="soc2"><a aria-label="Instagram" href="https://www.instagram.com/unity_space_" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+                            <a aria-label="YouTube" href="https://www.youtube.com/@UNITYSPACE-70" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="currentColor"/></svg></a>
+                            <a aria-label="X" href="https://x.com/UnitySpaceIN" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
+                            <a aria-label="LinkedIn" href="https://linkedin.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 11v6M8 7.5v.01M12 17v-6M12 13c0-3 5-3 5 0v4"/></svg></a>
+                        </div>
+                    </div>
+                    <form class="cf" action="https://formsubmit.co/unityspace70@gmail.com" method="POST"><input type="hidden" name="_subject" value="New Unity Space website enquiry"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_template" value="table">
+                        <div class="row">
+                            <div><label for="cF">First Name</label><input id="cF" name="first_name" required></div>
+                            <div><label for="cL">Last Name</label><input id="cL" name="last_name" required></div>
+                        </div>
+                        <div><label for="cE">Email</label><input id="cE" name="email" type="email" required></div>
+                        <div><label for="cM">Message</label><textarea id="cM" name="message" required></textarea></div>
+                        <button class="btn" type="submit">Send Message &#8599;</button>
+                        <p class="fs" role="status"></p>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- ===== FOOTER ===== -->
+    <footer id="ft">
+        <div class="w">
+            <div class="g">
+                <div>
+                    <a class="logo" href="#top" style="color:#fff"><img src="assets/unity-space-logo.png" alt="">UNITY SPACE</a>
+                    <p>Reusable, modular VTVL testing for drones and rockets.</p>
+                </div>
+                <div>
+                    <h4>Unity Space</h4>
+                    <a href="#about">About</a><a href="#contact">Careers</a><a href="#team">Our team</a><a href="#flightlog">Flight Log</a></div>
+                <div>
+                    <h4>Media</h4>
+                    <a href="#media">Media archive</a><a href="#flightlog">Flight Log</a><a href="#projects">Resources</a></div>
+                <div>
+                    <h4>Contact</h4>
+                    <a href="#contact">Get in touch</a><a id="mail" href="mailto:unityspace70@gmail.com">unityspace70@gmail.com</a>
+                    <p>Sample address: Unity Space, Test Range Road, India</p>
+                </div>
+            </div>
+            <div class="sup">
+                <div><b>SVPM COE Malegaon(bk) Baramati</b><br>Official Supporter</div>
+                <div class="soc"><a href="https://www.instagram.com/unity_space_" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+                    <a href="https://www.youtube.com/@UNITYSPACE-70" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="currentColor"/></svg></a>
+                    <a href="https://x.com/UnitySpaceIN" target="_blank" rel="noopener" aria-label="X (Twitter)" title="X (Twitter)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                    <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 11v6M8 7.5v.01M12 17v-6M12 13c0-3 5-3 5 0v4"/></svg></a>
+                </div>
+            </div>
+            <div class="legal"><span>© 2026 Unity Space · Exploring today. Inspiring tomorrow.</span><span><a href="#top">Terms &amp; Conditions</a><a href="#top">Privacy Policy</a><a href="#top">Cookie Policy</a></span></div>
+        </div>
+    </footer>
+    <!-- ===== POP-UP: project card in focus ===== -->
+    <div class="lbx" id="pl" role="dialog" aria-modal="true" aria-labelledby="plt" hidden>
+        <div class="fcard"><button class="mx" type="button" aria-label="Close">&#10005;</button>
+            <div class="fsc">
+                <div class="fi fmi" id="pli"></div>
+                <div class="cp"><span class="tag" id="plg"></span> <small id="plk"></small>
+                    <h3 id="plt"></h3>
+                    <p id="pld"></p>
+                    <p id="ple"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ===== POP-UP: flight log card in focus ===== -->
+    <div class="lbx" id="fm" role="dialog" aria-modal="true" aria-labelledby="fmt" hidden>
+        <div class="fcard"><button class="mx" type="button" aria-label="Close">&#10005;</button>
+            <div class="fsc">
+                <div class="fi fmi"></div>
+                <div class="cp"><span class="tag" id="fmg"></span> <small id="fmk"></small>
+                    <h3 id="fmt"></h3>
+                    <p id="fmd"></p>
+                    <a class="btn o" id="fml" href="#projects">View project</a></div>
+            </div>
+        </div>
+    </div>
+    <!-- ===== POP-UP: video player (Explore) ===== -->
+    <div class="modal" id="vm" role="dialog" aria-modal="true" hidden>
+        <div class="mbox"><button class="mx" aria-label="Close">&#10005;</button>
+            <h3 id="vtt"></h3>
+            <div id="vsv" class="vimg"></div>
+            <div class="vbar"><i></i></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
