@@ -3150,6 +3150,7 @@ header .unfl a.on {
 
 .fi .tag {
     background: var(--red);
+    color: black;
 }
 
 .soc2 a:hover,
@@ -3274,6 +3275,7 @@ hr,
 [data-theme="dark"] .tp,
 [data-theme="dark"] .fi .tag {
     background: linear-gradient(135deg, #35dfff, #087fbd);
+    color: white;
 }
 
 [data-theme="dark"] .tp {
@@ -3292,20 +3294,20 @@ hr,
 [data-theme="dark"] .color-orange,
 [data-theme="dark"] .soc2 a:hover,
 [data-theme="dark"] .soc a:hover {
-    color: #0D77B6;
+    color: #28A2DE;
 }
 
 [data-theme="dark"] .mv,
 [data-theme="dark"] .ib>div,
 [data-theme="dark"] .sp {
-    border-color: #0D77B6;
+    border-color: #28A2DE;
 }
 
 [data-theme="dark"] .tag,
 [data-theme="dark"] .links a.on,
 [data-theme="dark"] .mpanel a.on,
 [data-theme="dark"] .unfl a.on {
-    color: #0D77B6;
+    color: #28A2DE;
     background: rgba(53, 223, 255, .13);
 }
 
@@ -3323,27 +3325,27 @@ hr,
 [data-theme="dark"] .ham,
 [data-theme="dark"] .dots3 button {
     background: #101010;
-    color: #0D77B6;
+    color: #28A2DE;
 }
 
 [data-theme="dark"] .tgl svg,
 [data-theme="dark"] .ham span {
-    color: #0D77B6;
+    color: #28A2DE;
 }
 
 [data-theme="dark"] .btn,
 [data-theme="dark"] .mf.on,
 [data-theme="dark"] .tfb.on {
-    background: #0D77B6;
-    border-color: #0D77B6;
+    background: #28A2DE;
+    border-color: #28A2DE;
     color: #001014;
     box-shadow: 0 0 16px rgba(53, 223, 255, .24);
 }
 
 [data-theme="dark"] .btn.o {
     background: transparent;
-    border-color: #0D77B6;
-    color: #0D77B6;
+    border-color: #28A2DE;
+    color: #28A2DE;
     box-shadow: 0 0 12px rgba(53, 223, 255, .14);
 }
 
@@ -3354,11 +3356,11 @@ hr,
 }
 
 [data-theme="dark"] :focus-visible {
-    outline-color: #0D77B6;
+    outline-color: #28A2DE;
 }
 
 [data-theme="dark"] .ev-dots button.on {
-    background: #0D77B6;
+    background: #28A2DE;
     box-shadow: 0 0 12px rgba(53, 223, 255, .5);
 }
 
@@ -3375,7 +3377,7 @@ hr,
 [data-theme="dark"] .section-line,
 [data-theme="dark"] .divider-line,
 [data-theme="dark"] .section-separator {
-    border-top-color: #0D77B6;
+    border-top-color: #28A2DE;
     box-shadow: 0 -1px 8px rgba(53, 223, 255, .22);
 }
 
@@ -3385,7 +3387,7 @@ hr,
 [data-theme="dark"] header .links a.on,
 [data-theme="dark"] header .mpanel a.on,
 [data-theme="dark"] header .unfl a.on {
-    color: #0D77B6;
+    color: #28A2DE;
     background: rgba(53, 223, 255, .14);
 }
 
@@ -3490,102 +3492,142 @@ hr,
 /* Dark Theme – Blue */
 
 html[data-theme="dark"] {
-    --line-color: #0D77B6;
+    --line-color: #28A2DE;
 }
 
 
-/* UPCOMING EVENTS - TRANSPARENT 3D TEXT CYLINDER */
+/* =====================================================
+   UNITY SPACE - UPCOMING EVENTS
+   Transparent 3D Vertical Cylinder Animation
+===================================================== */
+
+
+/* Hero parent */
+
+.hero {
+    position: relative;
+}
+
+
+/* Main event container */
 
 .events {
     position: absolute;
-    right: 5%;
-    bottom: 40px;
+    right: 45px;
+    bottom: 38px;
     width: 340px;
-    z-index: 10;
+    z-index: 20;
+    padding: 0;
+    margin: 0;
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
-    padding: 0;
-    margin: 0;
-    overflow: visible;
+    text-align: right;
 }
+
+
+/* Heading */
 
 .ev-heading {
-    text-align: right;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 10px;
-    letter-spacing: 3px;
     font-weight: 600;
-    color: #8feaff;
+    letter-spacing: 3px;
+    color: #28A2DE;
     margin-bottom: 12px;
+    background: transparent;
 }
+
+
+/* Cylinder viewing window */
 
 .ev-window {
-    height: 85px;
     width: 100%;
+    height: 85px;
+    position: relative;
     overflow: hidden;
-    background: transparent !important;
-    perspective: 600px;
+    perspective: 650px;
     perspective-origin: center center;
+    background: transparent !important;
 }
 
+
+/* Rotating cylinder */
+
 .ev-track {
-    position: relative;
+    position: absolute;
     width: 100%;
-    height: 85px;
+    height: 100%;
+    inset: 0;
     transform-style: preserve-3d;
-    animation: verticalCylinder 12s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+    transform-origin: center center;
+    animation: unityEventCylinder 12s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+    will-change: transform;
 }
+
+
+/* Individual cylinder faces */
 
 .ev-item {
     position: absolute;
     inset: 0;
-    height: 85px;
     width: 100%;
+    height: 85px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
     text-align: right;
+    background: transparent !important;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    transform: rotateX(calc(var(--i, 0) * 120deg)) translateZ(49.07px);
 }
 
 
-/* Position each event on the cylinder */
+/* Three cylindrical positions */
 
 .ev-item:nth-child(1) {
-    --i: 0;
+    transform: rotateX(0deg) translateZ(49.07px);
 }
 
 .ev-item:nth-child(2) {
-    --i: 1;
+    transform: rotateX(120deg) translateZ(49.07px);
 }
 
 .ev-item:nth-child(3) {
-    --i: 2;
+    transform: rotateX(240deg) translateZ(49.07px);
 }
+
+
+/* Event title */
 
 .ev-item h2 {
     margin: 0;
-    color: #fff;
     font-family: 'Space Grotesk', sans-serif;
     font-size: 21px;
     font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #ffffff;
     text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
 }
 
+
+/* Event description */
+
 .ev-item p {
     margin: 7px 0 0;
-    color: rgba(255, 255, 255, 0.75);
-    font-size: 11px;
     font-family: 'Space Grotesk', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.75);
 }
 
 
-/* Continuous vertical cylindrical movement */
+/* =====================================================
+   CYLINDRICAL ROTATION ANIMATION
+===================================================== */
 
-@keyframes verticalCylinder {
+@keyframes unityEventCylinder {
     0%,
     25% {
         transform: rotateX(0deg);
@@ -3611,66 +3653,15 @@ html[data-theme="dark"] {
 }
 
 
-/* Mobile */
-
-@media (max-width: 600px) {
-    .events {
-        right: 20px;
-        bottom: 25px;
-        width: 260px;
-    }
-    .ev-item h2 {
-        font-size: 17px;
-    }
-    .ev-item p {
-        font-size: 10px;
-    }
-}
-
-
-/* =====================================
-   UPCOMING EVENTS - RESPONSIVE POSITION
-===================================== */
-
-.hero {
-    position: relative;
-}
-
-.events {
-    position: absolute !important;
-    right: clamp(16px, 4vw, 55px) !important;
-    bottom: clamp(20px, 4vh, 45px) !important;
-    left: auto !important;
-    top: auto !important;
-    width: clamp(230px, 28vw, 340px);
-    max-width: calc(100% - 32px);
-    z-index: 20;
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    padding: 0;
-    margin: 0;
-}
-
-
-/* Desktop */
-
-@media (min-width: 1025px) {
-    .events {
-        width: 340px;
-        right: 50px !important;
-        bottom: 40px !important;
-    }
-}
-
-
-/* Tablet */
+/* =====================================================
+   TABLET RESPONSIVE
+===================================================== */
 
 @media (min-width: 601px) and (max-width: 1024px) {
     .events {
         width: 280px;
-        right: 25px !important;
-        bottom: 30px !important;
+        right: 25px;
+        bottom: 30px;
     }
     .ev-item h2 {
         font-size: 19px;
@@ -3681,26 +3672,23 @@ html[data-theme="dark"] {
 }
 
 
-/* =====================================
-   MOBILE - UPCOMING EVENTS TOP RIGHT
-===================================== */
+/* =====================================================
+   MOBILE RESPONSIVE - TOP RIGHT
+===================================================== */
 
 @media (max-width: 600px) {
     .events {
-        position: absolute !important;
-        /* Top-right corner */
-        top: 95px !important;
-        right: 16px !important;
-        bottom: auto !important;
-        left: auto !important;
+        position: absolute;
+        top: 100px;
+        right: 16px;
+        bottom: auto;
+        left: auto;
         width: 190px;
         max-width: 55%;
-        z-index: 10;
+        z-index: 20;
         background: transparent !important;
         border: none !important;
         box-shadow: none !important;
-        padding: 0;
-        margin: 0;
         text-align: right;
     }
     .ev-heading {
@@ -3717,7 +3705,15 @@ html[data-theme="dark"] {
     }
     .ev-item {
         height: 58px;
-        transform: rotateX(calc(var(--i, 0) * 120deg)) translateZ(33.49px);
+    }
+    .ev-item:nth-child(1) {
+        transform: rotateX(0deg) translateZ(33.49px);
+    }
+    .ev-item:nth-child(2) {
+        transform: rotateX(120deg) translateZ(33.49px);
+    }
+    .ev-item:nth-child(3) {
+        transform: rotateX(240deg) translateZ(33.49px);
     }
     .ev-item h2 {
         font-size: 14px;
@@ -3730,16 +3726,19 @@ html[data-theme="dark"] {
 }
 
 
-/* Extra-small mobile screens */
+/* =====================================================
+   EXTRA SMALL MOBILE
+===================================================== */
 
 @media (max-width: 380px) {
     .events {
-        top: 88px !important;
-        right: 12px !important;
+        top: 90px;
+        right: 12px;
         width: 165px;
     }
     .ev-heading {
         font-size: 7px;
+        letter-spacing: 1.5px;
     }
     .ev-item h2 {
         font-size: 12px;
@@ -3747,4 +3746,61 @@ html[data-theme="dark"] {
     .ev-item p {
         font-size: 7px;
     }
+}
+
+
+/* =====================================================
+   ACCESSIBILITY
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .ev-track {
+        animation: none;
+        transform: none;
+    }
+    .ev-item:not(:first-child) {
+        display: none;
+    }
+}
+
+
+/*  
+   UPCOMING EVENTS - THEME COLOR MATCHING
+  */
+
+
+/* Light theme */
+
+html[data-theme="light"] .events {
+    --event-accent: #faa308;
+}
+
+
+/* Dark theme */
+
+html[data-theme="dark"] .events {
+    --event-accent: #28A2DE;
+}
+
+
+/* Apply the active theme accent */
+
+.events .ev-heading {
+    color: var(--event-accent) !important;
+    transition: color 0.3s ease;
+}
+
+
+/* Event titles */
+
+.events .ev-item h2 {
+    color: var(--event-accent);
+    transition: color 0.3s ease;
+}
+
+
+/* Event descriptions remain readable */
+
+.events .ev-item p {
+    color: rgba(255, 255, 255, 0.75);
 }
