@@ -26,6 +26,83 @@
             </div>
         </div>
     </header>
+
+    <!-- UNITY SPACE: UPCOMING EVENTS TICKER -->
+    <div class="us-news-ticker" role="region" aria-label="Upcoming event announcements">
+        <div class="us-ticker-label">
+            <svg class="us-ticker-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="5" width="18" height="16" rx="2"></rect>
+            <path d="M16 3v4M8 3v4M3 10h18"></path>
+        </svg>
+            <span>UPCOMING</span>
+        </div>
+
+        <div class="us-ticker-viewport">
+            <div class="us-ticker-track">
+
+                <div class="us-ticker-group">
+                    <article class="us-ticker-item">
+                        <span class="us-ticker-dot"></span>
+                        <div class="us-ticker-content">
+                            <strong>AIC Innovation</strong>
+                            <span>Upcoming event · Date to be announced</span>
+                        </div>
+                        <a class="us-ticker-link" href="#event-1">View Details</a>
+                    </article>
+
+                    <article class="us-ticker-item">
+                        <span class="us-ticker-dot"></span>
+                        <div class="us-ticker-content">
+                            <strong>ADT Innovation</strong>
+                            <span>Upcoming event · Date to be announced</span>
+                        </div>
+                        <a class="us-ticker-link" href="#event-2">View Details</a>
+                    </article>
+
+                    <article class="us-ticker-item">
+                        <span class="us-ticker-dot"></span>
+                        <div class="us-ticker-content">
+                            <strong>Phaltan Innovation</strong>
+                            <span>Upcoming event · Date to be announced</span>
+                        </div>
+                        <a class="us-ticker-link" href="#event-3">View Details</a>
+                    </article>
+                </div>
+
+                <!-- Duplicate group for seamless animation -->
+                <div class="us-ticker-group" aria-hidden="true">
+                    <article class="us-ticker-item">
+                        <span class="us-ticker-dot"></span>
+                        <div class="us-ticker-content">
+                            <strong>AIC Innovation</strong>
+                            <span>Upcoming event · Date to be announced</span>
+                        </div>
+                        <span class="us-ticker-link">View Details</span>
+                    </article>
+
+                    <article class="us-ticker-item">
+                        <span class="us-ticker-dot"></span>
+                        <div class="us-ticker-content">
+                            <strong>ADT Innovation</strong>
+                            <span>Upcoming event · Date to be announced</span>
+                        </div>
+                        <span class="us-ticker-link">View Details</span>
+                    </article>
+
+                    <article class="us-ticker-item">
+                        <span class="us-ticker-dot"></span>
+                        <div class="us-ticker-content">
+                            <strong>Phaltan Innovation</strong>
+                            <span>Upcoming event · Date to be announced</span>
+                        </div>
+                        <span class="us-ticker-link">View Details</span>
+                    </article>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <main id="top">
         <!-- ===== PAGE: FIRST PAGE (hero video + Explore content below it) ===== -->
         <div class="view" id="v-home">
@@ -33,34 +110,6 @@
             <section class="hero">
                 <video id="hv" class="hbg" autoplay muted loop playsinline preload="auto" poster="assets/background_video.mp4" aria-label="Earth seen from space at sunrise"><source src="assets/background_video.mp4" type="video/mp4"><source src="assets/background_video.mp4" type="video/mp4"></video>
                 <div class="hshade"></div>
-                <!-- Upcoming events slider card (top right of the first page). It changes slide every 2 seconds. Edit the three slides below. -->
-
-
-                <aside class="events" aria-label="Upcoming events">
-                    <div class="ev-heading">UPCOMING EVENTS</div>
-
-                    <div class="ev-window">
-                        <div class="ev-track">
-
-                            <div class="ev-item">
-                                <h2>AIC Innovation</h2>
-                                <p>Upcoming event · Date to be announced</p>
-                            </div>
-
-                            <div class="ev-item">
-                                <h2>ADT Innovation</h2>
-                                <p>Upcoming event · Date to be announced</p>
-                            </div>
-
-                            <div class="ev-item">
-                                <h2>Phaltan Innovation</h2>
-                                <p>Upcoming event · Date to be announced</p>
-                            </div>
-
-                        </div>
-                    </div>
-                </aside>
-
 
                 <div class="w g">
                     <div>
@@ -99,43 +148,28 @@
                         <!-- Card 1: Chetak 1 -->
                         <figure>
                             <div class="gi"><img class="isr" src="assets/chetak-2.png?width=900" alt="Chetak 1 " loading="lazy" decoding="async"></div>
-                            <figcaption>Chetak Series MK-I</figcaption>
+                            <figcaption><span>Chetak Series MK-I</span></figcaption>
                         </figure>
-                        <!-- Card 2: Chetak 2 -->
-                        <figure>
-                            <div class="gi"><img class="isr" src="assets/chetak-3.png?width=900" alt="Chetak 2 " loading="lazy" decoding="async"></div>
-                            <figcaption>Chetak Series MK-II</figcaption>
-                        </figure>
+
                         <!-- Card 3: Chetak 3  -->
                         <figure>
                             <div class="gi"><img class="isr" src="assets/Screenshot 2026-10-28 150212.png?width=900" alt="Chetak 3 " loading="lazy" decoding="async"></div>
-                            <figcaption>Chetak Series MK-III</figcaption>
+                            <figcaption><span>Chetak Series MK-III</span></figcaption>
                         </figure>
-                        <!-- Card 4: Rocket Model Design -->
-                        <figure>
-                            <div class="gi"><img class="isr" src="assets/WhatsApp Image 2026-10-27 at 19.19.23.jpeg?width=900" alt="Rocket Model Design" loading="lazy" decoding="async"></div>
-                            <figcaption>Rocket Model Design</figcaption>
-                        </figure>
-                        <!-- Card 5: Rocket CAD Design -->
-                        <figure>
-                            <div class="gi"><img class="isr" src="assets/Rocket part design.jpeg?width=900" alt="Rocket CAD Design" loading="lazy" decoding="async"></div>
-                            <figcaption>Rocket CAD Design</figcaption>
-                        </figure>
+
                         <!-- Card 6: The team at the range -->
                         <figure>
                             <div class="gi"><img class="isr" src="assets/Team.jpeg" alt="The team at the range" loading="lazy" decoding="async"></div>
-                            <figcaption>The team at the range</figcaption>
+                            <figcaption><span>The team at the range</span></figcaption>
                         </figure>
                     </div>
                     <h3 style="margin-top:56px">Videos</h3>
                     <div class="vids" id="vids">
                         <!-- Video tiles. data-title / data-isr feed the pop-up player. -->
                         <!-- Card 1: Landing burn replay -->
-                        <button class="vt" data-k="0" data-title="Landing burn replay" data-isr="https://commons.wikimedia.org/wiki/Special:FilePath/SPACE_PORT.jpg?width=900" data-video="assets/CHETAK-3 Video.mp4"><span class="th"><video src="assets/CHETAK-3 Video.mp4" poster="assets/chetak-3-poster.jpg" muted loop playsinline autoplay preload="metadata"></video></span><span class="m"><b class="pl-1">Flight Test</b><small></small></span></button>
+                        <button class="vt" data-k="0" data-title="Landing burn replay" data-isr="https://commons.wikimedia.org/wiki/Special:FilePath/SPACE_PORT.jpg?width=900" data-video="assets/CHETAK-3 Video.mp4"><span class="th"><span class="vt-play-overlay" aria-hidden="true"><span>▶</span></span><video src="assets/CHETAK-3 Video.mp4" poster="assets/chetak-3-poster.jpg" muted loop playsinline autoplay preload="metadata"></video></span><span class="m"><b class="set-pad">Flight Test</b><small></small></span></button>
                         <!-- Card 2: Hover test, tethered -->
-                        <button class="vt" data-k="1" data-title="Hover test, tethered" data-isr="https://commons.wikimedia.org/wiki/Special:FilePath/GSLV_Mk-III.jpg?width=900" data-video="assets/telemetry data..mp4"><span class="th"><video src="assets/telemetry data..mp4" poster="assets/telemetry data..mp4" muted loop playsinline autoplay preload="metadata"></video></span><span class="m"><b class="pl-1">Data Aquisition</b><small></small></span></button>
-                        <!-- Card 3: Building the modular platform -->
-                        <button class="vt" data-k="2" data-title="Building the modular platform" data-isr="https://commons.wikimedia.org/wiki/Special:FilePath/ISRO_PSLV_%282020%29_01.jpg?width=900" data-video="assets/WhatsApp Video 2026-10-27 at 19.44.40.mp4"><span class="th"><video src="assets/WhatsApp Video 2026-10-27 at 19.44.40.mp4" poster="assets/chetak-3-poster.jpg" muted loop playsinline autoplay preload="metadata"></video></span><span class="m"><b class="pl-1">Rocket part manufacturing</b><small></small></span></button>
+                        <button class="vt" data-k="1" data-title="Hover test, tethered" data-isr="https://commons.wikimedia.org/wiki/Special:FilePath/GSLV_Mk-III.jpg?width=900" data-video="assets/telemetry data..mp4"><span class="th"><span class="vt-play-overlay" aria-hidden="true"><span>▶</span></span><video src="assets/telemetry data..mp4" poster="assets/telemetry data..mp4" muted loop playsinline autoplay preload="metadata"></video></span><span class="m"><b class="set-pad">Data Aquisition</b><small></small></span></button>
                     </div>
                 </div>
             </section>
@@ -159,51 +193,90 @@
 
                 </div>
             </section>
-            <!-- --- SECTION: Reference archive · NASA flight research --- -->
+            <!-- --- SECTION: Reference archive · UNITY SPACE flight research --- -->
+
             <section>
                 <div class="w">
                     <p class="eb">Reference archive · UNITY SPACE flight research</p>
                     <h2>Flight Test, Frame by Frame</h2>
-                    <p class="lead">Explore real-world research aircraft in flight and the teams preparing each mission. Hover, focus or select a frame to expand it.</p>
-                    <div class="ftt" id="ftt" aria-label="NASA flight test image archive">
-                        <!-- NASA flight-test frames. One <a> per frame; the first one starts open (class "on"). -->
-                        <!-- Card 1: CHETAK-3 Launch -->
-                        <a class="fta on" href="assets/chetak-3.png" target="_blank" rel="noopener noreferrer" aria-label="CHETAK-3 Launch"><img src="assets/chetak-3.png" alt="NASA X-59 flying over the Mojave Desert with an F/A-18 chase aircraft" loading="eager" decoding="async"><span class="num"></span>
-                            <span class="cap"><b>CHETAK-3 Launch</b><small>Photo: Chetak / UNITY SPACE</small></span>
-                        </a>
-                        <!-- Card 2: CHETAK-1 TEST -->
-                        <a class="fta" href="assets/flight_chetak-1.png" target="_blank" rel="noopener noreferrer" aria-label="CHETAK-1 TEST"><img src="assets/flight_chetak-1.png" alt="NASA X-59 and F/A-18 research aircraft flying in formation" loading="lazy" decoding="async"><span class="num"></span>
-                            <span class="cap"><b>CHETAK-1 TEST</b><small>Photo: Chetak / UNITY SPACE</small></span>
-                        </a>
-                        <!-- Card 3: CHETAK-2 Launch -->
-                        <a class="fta" href="assets/chetak-2.png" target="_blank" rel="noopener noreferrer" aria-label="CHETAK-2 Launch"><img src="assets/chetak-2.png" alt="NASA X-59 low-boom flight demonstrator during a research flight" loading="lazy" decoding="async"><span class="num"></span>
-                            <span class="cap"><b>CHETAK-2 Launch</b><small>Photo: Chetak / UNITY SPACE</small></span>
-                        </a>
-                        <!-- Card 4: Team length actively working -->
-                        <a class="fta" href="assets/Team.jpeg" target="_blank" rel="noopener noreferrer" aria-label="Team length actively working"><img src="assets/Team.jpeg" alt="NASA X-59 flying with an F/A-18 monitoring aircraft during flight testing" loading="lazy" decoding="async"><span class="num"></span>
-                            <span class="cap"><b>Team length actively working</b><small>Photo: Team / UNITY SPACE</small></span>
-                        </a>
-                        <!-- Card 5: Rocket CAD Design -->
-                        <a class="fta" href="assets/Screenshot 2026-10-30 100530.png" target="_blank" rel="noopener noreferrer" aria-label="Rocket CAD Design"><img src="assets/Screenshot 2026-10-30 100530.png" alt="NASA X-59 in profile during supersonic flight testing" loading="lazy" decoding="async"><span class="num"></span>
-                            <span class="cap"><b>Rocket CAD Design</b><small>Photo: CAD / UNITY SPACE</small></span>
-                        </a>
-                        <!-- Card 6: Rocket Performance Test -->
-                        <a class="fta" href="assets/Screenshot 2026-10-28 150212.png" target="_blank" rel="noopener noreferrer" aria-label="Rocket Performance Test"><img src="assets/Screenshot 2026-10-28 150212.png" alt="NASA X-59 undergoing a supersonic research flight over California" loading="lazy" decoding="async"><span class="num"></span>
-                            <span class="cap"><b>Rocket Performance Test</b><small>Photo: Rocket / UNITY SPACE</small></span>
-                        </a>
-                        <!-- Card 7: Events & Demonstration -->
-                        <a class="fta" href="assets/team_photo.jpeg" target="_blank" rel="noopener noreferrer" aria-label="Events & Demonstration"><img src="assets/team_photo.jpeg" alt="NASA X-59 research aircraft in flight against a clear sky" loading="lazy" decoding="async"><span class="num"></span>
-                            <span class="cap"><b>Events & Demonstration</b><small>Photo: Team / UNITY SPACE</small></span>
-                        </a>
-                        <!-- Card 8: Rocket parts design -->
-                        <a class="fta" href="assets/Rocket part design.jpeg" target="_blank" rel="noopener noreferrer" aria-label="Rocket parts design"><img src="assets/Rocket part design.jpeg" alt="NASA X-59 flying above mountain ridges near Armstrong Flight Research Center" loading="lazy" decoding="async"><span class="num"></span>
-                            <span class="cap"><b>Rocket parts design</b><small>Photo: Rocket / UNITY SPACE</small></span>
-                        </a>
+                    <p class="lead">Explore real-world research aircraft in flight and the teams preparing each mission. Tap a frame to view it full screen.</p>
+
+                    <div class="ftt" id="ftt" aria-label="Unity Space flight test image archive">
+
+                        <button class="fta on" type="button" aria-label="View CHETAK-3 Launch">
+                <img src="assets/chetak-3.png" alt="CHETAK-3 launch" loading="eager" decoding="async">
+
+                <span class="cap">
+                    <b>CHETAK-3 Launch</b>
+                    <small>Photo: Chetak / UNITY SPACE</small>
+                </span>
+            </button>
+
+                        <button class="fta" type="button" aria-label="View CHETAK-1 TEST">
+                <img src="assets/flight_chetak-1.png" alt="CHETAK-1 test" loading="lazy" decoding="async">
+
+                <span class="cap">
+                    <b>CHETAK-1 TEST</b>
+                    <small>Photo: Chetak / UNITY SPACE</small>
+                </span>
+            </button>
+
+                        <button class="fta" type="button" aria-label="View CHETAK-2 Launch">
+                <img src="assets/chetak-2.png" alt="CHETAK-2 launch" loading="lazy" decoding="async">
+
+                <span class="cap">
+                    <b>CHETAK-2 Launch</b>
+                    <small>Photo: Chetak / UNITY SPACE</small>
+                </span>
+            </button>
+
+                        <button class="fta" type="button" aria-label="View team working">
+                <img src="assets/Team.jpeg" alt="Unity Space team working" loading="lazy" decoding="async">
+
+                <span class="cap">
+                    <b>Team actively working</b>
+                    <small>Photo: Team / UNITY SPACE</small>
+                </span>
+            </button>
+
+                        <button class="fta" type="button" aria-label="View Rocket CAD Design">
+                <img src="assets/Screenshot 2026-10-30 100530.png" alt="Rocket CAD design" loading="lazy" decoding="async">
+
+                <span class="cap">
+                    <b>Rocket CAD Design</b>
+                    <small>Photo: CAD / UNITY SPACE</small>
+                </span>
+            </button>
+                        <button class="fta" type="button" aria-label="View Rocket Performance Test">
+
+                <span class="cap">
+                    <b>Rocket Performance Test</b>
+                    <small>Photo: Rocket / UNITY SPACE</small>
+                </span>
+            </button>
+
+                        <button class="fta" type="button" aria-label="View Events and Demonstration">
+                <img src="assets/team_photo.jpeg" alt="Unity Space event and demonstration" loading="lazy" decoding="async">
+
+                <span class="cap">
+                    <b>Events &amp; Demonstration</b>
+                    <small>Photo: Team / UNITY SPACE</small>
+                </span>
+            </button>
+
+                        <button class="fta" type="button" aria-label="View Rocket parts design">
+                <img src="assets/Rocket part design.jpeg" alt="Rocket parts design" loading="lazy" decoding="async">
+
+                <span class="cap">
+                    <b>Rocket parts design</b>
+                    <small>Photo: Rocket / UNITY SPACE</small>
+                </span>
+            </button>
 
                     </div>
-
                 </div>
             </section>
+
             <!-- --- SECTION: Media filter buttons and cards --- -->
             <section class="soft">
                 <div class="w">
@@ -327,7 +400,7 @@
           <p class="note" style="margin-top:0">Sponsor logos will be added here as partnerships are confirmed.</p>
           <div class="mq" role="region" aria-label="Sponsor logo placeholders">
             <div class="mt" id="mt">
-              
+
               <ul aria-label="12 sponsor logo placeholders">
                 <li><img src="assets/unity-space-logo.png" alt="Sponsor logo placeholder"></li>
                 <li><img src="assets/unity-space-logo.png" alt="Sponsor logo placeholder"></li>
@@ -359,26 +432,6 @@
             </div>
           </div>
         </div>-->
-                </div>
-            </section>
-            <!-- --- SECTION: Partner with us --- -->
-            <section id="sponsor-form">
-                <div class="w cg">
-                    <div>
-                        <p class="eb">Partner with us</p>
-                        <h2>Let&rsquo;s build the future together.</h2>
-                        <p class="lead">If you would like to sponsor a project, support a student team or discuss a collaboration, send us a message.</p>
-                    </div>
-                    <form class="cf" action="https://formsubmit.co/unityspace70@gmail.com" method="POST"><input type="hidden" name="_subject" value="Unity Space sponsorship enquiry"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_template" value="table">
-                        <div class="row">
-                            <div><label for="sF">First Name</label><input id="sF" name="first_name" required></div>
-                            <div><label for="sL">Last Name</label><input id="sL" name="last_name" required></div>
-                        </div>
-                        <div><label for="sE">Email</label><input id="sE" name="email" type="email" required></div>
-                        <div><label for="sM">Message</label><textarea id="sM" name="message" required></textarea></div>
-                        <button class="btn" type="submit">Send Message &#8599;</button>
-                        <p class="fs" role="status"></p>
-                    </form>
                 </div>
             </section>
         </div>
@@ -472,31 +525,7 @@
                                     <p>To design and experiment with a servo-actuated thrust vector control mechanism for experimental rocket systems.</p>
                                 </div>
                             </div>
-                            <!-- Project cards (click a card to open it in focus) -->
-                            <!--<div class="pg">
 
-                                <div class="pc lk" role="button" tabindex="0" data-k="0" data-progname="DELTA" data-label="DELTA · FLIGHT TESTING" data-title="Flight Demonstration" data-text="DELTA is an electric vertical-flight platform built to validate integrated flight control, avionics, sensing and telemetry."
-                                    data-vision="To explore advanced rocket control technologies and improve the understanding of flight stability and directional control." data-mission="To design and experiment with a servo-actuated thrust vector control mechanism for experimental rocket systems."
-                                    data-isr="https://commons.wikimedia.org/wiki/Special:FilePath/GSLV_Mk-III.jpg?width=900" data-un="https://images.unsplash.com/photo-1517976547714-720226b864c1?auto=format&amp;fit=crop&amp;w=1400&amp;q=85">
-                                    <div class="fi"><img class="isr" src="https://commons.wikimedia.org/wiki/Special:FilePath/GSLV_Mk-III.jpg?width=900" alt="Example image: ISRO rocket" loading="lazy" decoding="async"><img src="https://images.unsplash.com/photo-1517976547714-720226b864c1?auto=format&fit=crop&w=1000&q=85"
-                                            alt="Flight Demonstration" loading="lazy" decoding="async"></div>
-                                    <div class="cp"><small class="pj">DELTA · FLIGHT TESTING</small>
-                                        <h3>Flight Demonstration</h3>
-                                        <p>DELTA is an electric vertical-flight platform built to validate integrated flight control, avionics, sensing and telemetry.</p>
-                                    </div>
-                                </div>
-
-                                <div class="pc lk" role="button" tabindex="0" data-k="1" data-progname="DELTA" data-label="DELTA · DESIGN" data-title="CAD Render" data-text="The CAD model brings together airframe layout, component packaging and control hardware for assembly and interface reviews before fabrication."
-                                    data-vision="To explore advanced rocket control technologies and improve the understanding of flight stability and directional control." data-mission="To design and experiment with a servo-actuated thrust vector control mechanism for experimental rocket systems."
-                                    data-isr="https://commons.wikimedia.org/wiki/Special:FilePath/ROCKET_MODEL.jpg?width=900" data-un="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&amp;fit=crop&amp;w=1400&amp;q=85">
-                                    <div class="fi"><img class="isr" src="https://commons.wikimedia.org/wiki/Special:FilePath/ROCKET_MODEL.jpg?width=900" alt="Example image: ISRO rocket" loading="lazy" decoding="async"><img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1000&q=85"
-                                            alt="CAD Render" loading="lazy" decoding="async"></div>
-                                    <div class="cp"><small class="pj">DELTA · DESIGN</small>
-                                        <h3>CAD Render</h3>
-                                        <p>The CAD model brings together airframe layout, component packaging and control hardware for assembly and interface reviews before fabrication.</p>
-                                    </div>
-                                </div>
-                            </div>-->
 
 
                         </section>
@@ -583,10 +612,6 @@
 
             </section>
             <!-- --- SECTION: Public log --- -->
-
-
-
-
             <section>
                 <hr class="h-line" />
                 <div class="w ">
@@ -830,7 +855,7 @@
                     <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 11v6M8 7.5v.01M12 17v-6M12 13c0-3 5-3 5 0v4"/></svg></a>
                 </div>
             </div>
-            <div class="legal"><span>© 2026 Unity Space · Exploring today. Inspiring tomorrow.</span><span><a href="#top">Terms &amp; Conditions</a><a href="#top">Privacy Policy</a><a href="#top">Cookie Policy</a></span></div>
+            <div class="legal"><span>© 2026 Unity Space · Exploring today. Inspiring tomorrow.</span></div>
         </div>
     </footer>
     <!-- ===== POP-UP: project card in focus ===== -->
@@ -866,7 +891,108 @@
             <div class="vbar"><i></i></div>
         </div>
     </div>
+
+    <!-- ===== POP-UP: Flight Test image viewer ===== -->
+    <div class="flight-image-modal" id="flightImageModal" role="dialog" aria-modal="true" aria-label="Flight test image viewer" aria-hidden="true">
+        <button class="flight-image-close" id="flightImageClose" type="button" aria-label="Close image">×</button>
+        <img id="flightImageFull" src="" alt="">
+        <p class="flight-image-caption" id="flightImageCaption"></p>
+    </div>
+
     <script src="script.js"></script>
+
+    <script>
+        (() => {
+            // Explore videos: replace the preview with a playable video in the same card.
+            document.addEventListener('click', (event) => {
+                const card = event.target.closest('#v-home .vids .vt');
+                if (!card || card.classList.contains('vt-playing')) return;
+
+                event.preventDefault();
+                event.stopPropagation();
+                event.stopImmediatePropagation();
+
+                const source = card.dataset.video;
+                if (!source) return;
+
+                const preview = card.querySelector('.th video');
+                const poster = preview ? (preview.getAttribute('poster') || '') : '';
+                const title = card.dataset.title || card.querySelector('.m b') ? .textContent ? .trim() || 'Unity Space video';
+
+                const playerCard = document.createElement('article');
+                playerCard.className = card.className + ' vt-playing';
+                playerCard.setAttribute('aria-label', title);
+
+                const thumb = document.createElement('div');
+                thumb.className = 'th';
+
+                const player = document.createElement('video');
+                player.src = source;
+                if (poster) player.poster = poster;
+                player.controls = true;
+                player.playsInline = true;
+                player.preload = 'metadata';
+                player.autoplay = true;
+                player.setAttribute('aria-label', title);
+                thumb.appendChild(player);
+
+                const caption = card.querySelector('.m');
+                playerCard.appendChild(thumb);
+                if (caption) playerCard.appendChild(caption.cloneNode(true));
+
+                card.replaceWith(playerCard);
+                player.play().catch(() => {
+                    player.controls = true;
+                });
+            }, true);
+
+            // Flight Test images: open a large image in an on-page viewer, never a new tab.
+            const gallery = document.getElementById('ftt');
+            const modal = document.getElementById('flightImageModal');
+            const fullImage = document.getElementById('flightImageFull');
+            const caption = document.getElementById('flightImageCaption');
+            const closeButton = document.getElementById('flightImageClose');
+
+            if (gallery && modal && fullImage && closeButton) {
+                const closeImage = () => {
+                    modal.classList.remove('is-open');
+                    modal.setAttribute('aria-hidden', 'true');
+                    fullImage.removeAttribute('src');
+                    document.body.classList.remove('image-viewer-open');
+                };
+
+                gallery.addEventListener('click', (event) => {
+                    const frame = event.target.closest('a.fta');
+                    if (!frame) return;
+
+                    event.preventDefault();
+                    event.stopPropagation();
+                    event.stopImmediatePropagation();
+
+                    const image = frame.querySelector('img');
+                    if (!image) return;
+
+                    fullImage.src = image.currentSrc || image.src;
+                    fullImage.alt = image.alt || frame.getAttribute('aria-label') || 'Flight test image';
+                    caption.textContent = frame.querySelector('.cap b') ? .textContent ? .trim() || fullImage.alt;
+
+                    modal.classList.add('is-open');
+                    modal.setAttribute('aria-hidden', 'false');
+                    document.body.classList.add('image-viewer-open');
+                    closeButton.focus();
+                }, true);
+
+                closeButton.addEventListener('click', closeImage);
+                modal.addEventListener('click', (event) => {
+                    if (event.target === modal) closeImage();
+                });
+                document.addEventListener('keydown', (event) => {
+                    if (event.key === 'Escape' && modal.classList.contains('is-open')) closeImage();
+                });
+            }
+        })();
+    </script>
+
 </body>
 
 </html>

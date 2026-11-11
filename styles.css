@@ -1,3 +1,8 @@
+/* HOW TO FIND CODE: search this file for "SECTION:" to jump to the styles of each part of the website. */
+
+
+/* ===== SECTION: GLOBAL (colours, fonts, headings, buttons) ===== */
+
 :root {
     --navy: #0a0a0a;
     --navy2: #1c1c1c;
@@ -5,7 +10,6 @@
     --blue2: #faa308;
     --red: #faa308;
     --ot: #b87400;
-    --line-color: #faa308;
     --ink: #111111;
     --mut: #666666;
     --bg: #fff;
@@ -523,14 +527,23 @@ footer a:hover {
 
 .gal figcaption {
     position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 48px 18px 16px;
+    top: 12px;
+    left: 12px;
+    right: auto;
+    bottom: auto;
+    z-index: 5;
+    max-width: calc(100% - 24px);
+    padding: 9px 13px;
+    margin: 0;
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 8px;
     color: #fff;
     font-weight: 600;
-    font-size: 15px;
-    background: linear-gradient(to top, rgba(40, 30, 0, .7), rgba(40, 30, 0, 0));
+    font-size: 14px;
+    line-height: 1.35;
+    background: rgba(0, 0, 0, .58);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 .vt {
@@ -3150,7 +3163,6 @@ header .unfl a.on {
 
 .fi .tag {
     background: var(--red);
-    color: black;
 }
 
 .soc2 a:hover,
@@ -3275,7 +3287,6 @@ hr,
 [data-theme="dark"] .tp,
 [data-theme="dark"] .fi .tag {
     background: linear-gradient(135deg, #35dfff, #087fbd);
-    color: white;
 }
 
 [data-theme="dark"] .tp {
@@ -3294,20 +3305,20 @@ hr,
 [data-theme="dark"] .color-orange,
 [data-theme="dark"] .soc2 a:hover,
 [data-theme="dark"] .soc a:hover {
-    color: #28A2DE;
+    color: #35dfff;
 }
 
 [data-theme="dark"] .mv,
 [data-theme="dark"] .ib>div,
 [data-theme="dark"] .sp {
-    border-color: #28A2DE;
+    border-color: #35dfff;
 }
 
 [data-theme="dark"] .tag,
 [data-theme="dark"] .links a.on,
 [data-theme="dark"] .mpanel a.on,
 [data-theme="dark"] .unfl a.on {
-    color: #28A2DE;
+    color: #35dfff;
     background: rgba(53, 223, 255, .13);
 }
 
@@ -3325,27 +3336,27 @@ hr,
 [data-theme="dark"] .ham,
 [data-theme="dark"] .dots3 button {
     background: #101010;
-    color: #28A2DE;
+    color: #35dfff;
 }
 
 [data-theme="dark"] .tgl svg,
 [data-theme="dark"] .ham span {
-    color: #28A2DE;
+    color: #35dfff;
 }
 
 [data-theme="dark"] .btn,
 [data-theme="dark"] .mf.on,
 [data-theme="dark"] .tfb.on {
-    background: #28A2DE;
-    border-color: #28A2DE;
+    background: #35dfff;
+    border-color: #35dfff;
     color: #001014;
     box-shadow: 0 0 16px rgba(53, 223, 255, .24);
 }
 
 [data-theme="dark"] .btn.o {
     background: transparent;
-    border-color: #28A2DE;
-    color: #28A2DE;
+    border-color: #35dfff;
+    color: #35dfff;
     box-shadow: 0 0 12px rgba(53, 223, 255, .14);
 }
 
@@ -3356,11 +3367,11 @@ hr,
 }
 
 [data-theme="dark"] :focus-visible {
-    outline-color: #28A2DE;
+    outline-color: #35dfff;
 }
 
 [data-theme="dark"] .ev-dots button.on {
-    background: #28A2DE;
+    background: #35dfff;
     box-shadow: 0 0 12px rgba(53, 223, 255, .5);
 }
 
@@ -3377,7 +3388,7 @@ hr,
 [data-theme="dark"] .section-line,
 [data-theme="dark"] .divider-line,
 [data-theme="dark"] .section-separator {
-    border-top-color: #28A2DE;
+    border-top-color: #35dfff;
     box-shadow: 0 -1px 8px rgba(53, 223, 255, .22);
 }
 
@@ -3387,7 +3398,7 @@ hr,
 [data-theme="dark"] header .links a.on,
 [data-theme="dark"] header .mpanel a.on,
 [data-theme="dark"] header .unfl a.on {
-    color: #28A2DE;
+    color: #35dfff;
     background: rgba(53, 223, 255, .14);
 }
 
@@ -3467,340 +3478,2997 @@ hr,
 }
 
 
-/* Fix page visibility */
+/* =========================================================
+   UNITY SPACE — BLACK + ELECTRIC BLUE NEON DARK THEME
+   Full-file update: original layout and responsive rules
+   are preserved; these rules only refine dark-mode styling.
+   ========================================================= */
 
-.view[hidden] {
+html[data-theme="dark"] {
+    --bg: #05080f;
+    --soft: #0a1423;
+    --ink: #eef7ff;
+    --mut: #a6b8cc;
+    --line: rgba(57, 166, 255, .24);
+    --blue: #28a2ff;
+    --blue2: #55d6ff;
+    --red: #28a2ff;
+    --ot: #55c7ff;
+    --line-color: #28a2ff;
+    --neon-blue: #28a2ff;
+    --neon-cyan: #55dfff;
+    --neon-glow: rgba(40, 162, 255, .24);
+    color-scheme: dark;
+}
+
+
+/* Global black/navy base with soft blue light pools */
+
+html[data-theme="dark"] body {
+    background: radial-gradient(ellipse 700px 520px at 8% 12%, rgba(0, 105, 255, .15), transparent 70%), radial-gradient(ellipse 680px 500px at 92% 38%, rgba(0, 190, 255, .10), transparent 70%), radial-gradient(ellipse 900px 600px at 50% 100%, rgba(0, 75, 190, .12), transparent 72%), #05080f;
+    color: var(--ink);
+}
+
+
+/* Main content sections retain their structure */
+
+html[data-theme="dark"] section {
+    background-color: transparent;
+}
+
+html[data-theme="dark"] .soft {
+    background: linear-gradient(135deg, rgba(10, 24, 43, .94), rgba(5, 11, 21, .97));
+}
+
+html[data-theme="dark"] .dark {
+    background: radial-gradient(ellipse at 85% 15%, rgba(0, 130, 255, .12), transparent 55%), #05080f;
+    color: var(--ink);
+}
+
+html[data-theme="dark"] .dark p,
+html[data-theme="dark"] .card p {
+    color: var(--mut);
+}
+
+
+/* Hero: blue glow behind the existing background video */
+
+html[data-theme="dark"] .hero {
+    background: radial-gradient(ellipse 850px 520px at 82% 25%, rgba(0, 130, 255, .22), transparent 68%), radial-gradient(ellipse 600px 420px at 12% 85%, rgba(0, 190, 255, .10), transparent 70%), #05080f;
+    color: #f3f9ff;
+}
+
+html[data-theme="dark"] .hero .eb {
+    color: #55dfff;
+}
+
+
+/* Keep hero video and overlay above the background */
+
+html[data-theme="dark"] .hbg {
+    z-index: 0;
+}
+
+html[data-theme="dark"] .hshade {
+    background: linear-gradient(90deg, rgba(2, 6, 13, .82) 0%, rgba(2, 8, 18, .48) 55%, rgba(2, 8, 18, .20) 100%);
+}
+
+
+/* Navbar */
+
+html[data-theme="dark"] header,
+html[data-theme="dark"] header.hm,
+html[data-theme="dark"] header.hm.sc {
+    background: rgba(4, 8, 15, .91);
+    color: #f1f8ff;
+    border-bottom: 1px solid rgba(40, 162, 255, .25);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+html[data-theme="dark"] header .logo,
+html[data-theme="dark"] header .links a,
+html[data-theme="dark"] header .mpanel a,
+html[data-theme="dark"] header .unfl a,
+html[data-theme="dark"] header .tgl,
+html[data-theme="dark"] header .ham,
+html[data-theme="dark"] header .dots3 button {
+    color: #eef7ff;
+}
+
+html[data-theme="dark"] header .tgl,
+html[data-theme="dark"] header .ham,
+html[data-theme="dark"] header .dots3 button {
+    background: #0b1728;
+    border-color: rgba(40, 162, 255, .35);
+}
+
+html[data-theme="dark"] header .mpanel,
+html[data-theme="dark"] header .unfl {
+    background: rgba(5, 13, 25, .98);
+    border-color: rgba(40, 162, 255, .28);
+}
+
+html[data-theme="dark"] header .links a:hover,
+html[data-theme="dark"] header .mpanel a:hover,
+html[data-theme="dark"] header .unfl a:hover {
+    background: rgba(40, 162, 255, .12);
+}
+
+html[data-theme="dark"] header .links a.on,
+html[data-theme="dark"] header .mpanel a.on,
+html[data-theme="dark"] header .unfl a.on {
+    color: #55dfff;
+    background: rgba(40, 162, 255, .15);
+}
+
+
+/* Shared cards and content panels */
+
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .fc,
+html[data-theme="dark"] .pc,
+html[data-theme="dark"] .ft div,
+html[data-theme="dark"] .tm2,
+html[data-theme="dark"] .fcard,
+html[data-theme="dark"] .mbox {
+    background: linear-gradient(145deg, rgba(12, 28, 49, .96), rgba(5, 12, 23, .98));
+    border-color: rgba(40, 162, 255, .25);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, .20), 0 0 18px rgba(0, 115, 255, .055), inset 0 0 22px rgba(0, 130, 255, .025);
+}
+
+html[data-theme="dark"] .card:hover,
+html[data-theme="dark"] .fc:hover,
+html[data-theme="dark"] .pc:hover,
+html[data-theme="dark"] .ft div:hover,
+html[data-theme="dark"] .tm2:hover {
+    border-color: rgba(75, 190, 255, .62);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, .28), 0 0 16px rgba(40, 162, 255, .16), 0 0 34px rgba(40, 162, 255, .08);
+}
+
+
+/* Team wide card */
+
+html[data-theme="dark"] .tm-wide {
+    background: linear-gradient(145deg, #10243d, #070e19 78%);
+    border: 1px solid rgba(40, 162, 255, .28);
+    box-shadow: 0 0 22px rgba(0, 120, 255, .09);
+}
+
+
+/* Team profile image rings */
+
+html[data-theme="dark"] .tp {
+    border-color: #28a2ff;
+    background: linear-gradient(135deg, #168bff, #55dfff);
+    box-shadow: 0 0 16px rgba(40, 162, 255, .28);
+}
+
+
+/* Headings, labels and icon accents */
+
+html[data-theme="dark"] .tinfo h3,
+html[data-theme="dark"] .fc small,
+html[data-theme="dark"] .fc .cp small,
+html[data-theme="dark"] .fcard .cp small,
+html[data-theme="dark"] .mc .pj,
+html[data-theme="dark"] .pc .pj,
+html[data-theme="dark"] .eb,
+html[data-theme="dark"] .dark .eb,
+html[data-theme="dark"] .soc2 a:hover,
+html[data-theme="dark"] .soc a:hover {
+    color: #55cfff;
+}
+
+html[data-theme="dark"] .ft svg {
+    stroke: #28a2ff;
+}
+
+
+/* Buttons */
+
+html[data-theme="dark"] .btn {
+    background: linear-gradient(135deg, #168bff, #55dfff);
+    color: #03101d;
+    box-shadow: 0 0 13px rgba(40, 162, 255, .24);
+}
+
+html[data-theme="dark"] .btn:hover {
+    filter: brightness(1.12);
+    box-shadow: 0 0 16px rgba(40, 162, 255, .48), 0 0 32px rgba(40, 162, 255, .18);
+}
+
+html[data-theme="dark"] .btn.o {
+    background: transparent;
+    border-color: #28a2ff;
+    color: #65d8ff;
+}
+
+
+/* Media image placeholders */
+
+html[data-theme="dark"] .fi,
+html[data-theme="dark"] .gi,
+html[data-theme="dark"] .vimg {
+    background: linear-gradient(135deg, #12365a, #07111f);
+}
+
+
+/* Tags and filter controls */
+
+html[data-theme="dark"] .tag {
+    background: rgba(40, 162, 255, .14);
+    color: #72dcff;
+    border-color: rgba(40, 162, 255, .30);
+}
+
+html[data-theme="dark"] .mf,
+html[data-theme="dark"] .tfb {
+    background: #0b1a2c;
+    color: #b9eaff;
+    border-color: rgba(40, 162, 255, .30);
+}
+
+html[data-theme="dark"] .mf.on,
+html[data-theme="dark"] .tfb.on {
+    background: linear-gradient(135deg, #168bff, #55dfff);
+    color: #03101d;
+    border-color: #28a2ff;
+}
+
+
+/* Form fields */
+
+html[data-theme="dark"] .cf input,
+html[data-theme="dark"] .cf textarea,
+html[data-theme="dark"] input,
+html[data-theme="dark"] textarea {
+    background: #091625;
+    color: #eef7ff;
+    border-color: rgba(40, 162, 255, .30);
+}
+
+html[data-theme="dark"] .cf input::placeholder,
+html[data-theme="dark"] .cf textarea::placeholder,
+html[data-theme="dark"] input::placeholder,
+html[data-theme="dark"] textarea::placeholder {
+    color: #8299b3;
+}
+
+html[data-theme="dark"] .cf input:focus,
+html[data-theme="dark"] .cf textarea:focus,
+html[data-theme="dark"] input:focus,
+html[data-theme="dark"] textarea:focus {
+    outline: none;
+    border-color: #42baff;
+    box-shadow: 0 0 12px rgba(40, 162, 255, .18);
+}
+
+
+/* Popups and modal controls */
+
+html[data-theme="dark"] .modal .mx,
+html[data-theme="dark"] .fcard .mx {
+    background: #0b1727;
+    color: #eef7ff;
+    border-color: rgba(40, 162, 255, .30);
+}
+
+html[data-theme="dark"] .fcard .mx:hover {
+    background: #28a2ff;
+    color: #03101d;
+}
+
+
+/* About hero/content overlay */
+
+html[data-theme="dark"] .abh {
+    background: linear-gradient(rgba(4, 10, 19, .88), rgba(4, 10, 19, .96)), #081321 !important;
+}
+
+
+/* Footer */
+
+html[data-theme="dark"] footer {
+    background: radial-gradient(ellipse at 50% 0%, rgba(0, 130, 255, .16), transparent 68%), #03060c;
+    color: #b8c9dc;
+    border-top: 1px solid rgba(40, 162, 255, .22);
+}
+
+html[data-theme="dark"] footer h4 {
+    color: #eef7ff;
+}
+
+html[data-theme="dark"] footer a:hover {
+    color: #55dfff;
+}
+
+html[data-theme="dark"] .legal {
+    border-top-color: rgba(40, 162, 255, .20);
+}
+
+
+/* Dividers and horizontal lines */
+
+html[data-theme="dark"] hr,
+html[data-theme="dark"] .section-divider,
+html[data-theme="dark"] .section-line,
+html[data-theme="dark"] .divider-line,
+html[data-theme="dark"] .section-separator {
+    border-top-color: rgba(40, 162, 255, .38);
+}
+
+html[data-theme="dark"] .h-line {
+    background: linear-gradient(90deg, transparent, #28a2ff, transparent);
+    box-shadow: 0 0 9px rgba(40, 162, 255, .22);
+}
+
+
+/* Day/night toggle */
+
+html[data-theme="dark"] .tgl {
+    color: #55dfff;
+    border-color: rgba(40, 162, 255, .48);
+    box-shadow: 0 0 12px rgba(40, 162, 255, .16);
+}
+
+
+/* Flight Log video stays clean and black */
+
+html[data-theme="dark"] #v-flightlog .vf>div:last-child,
+html[data-theme="dark"] #v-flightlog .vf video {
+    background: #000;
+    box-shadow: 0 14px 38px rgba(0, 0, 0, .42);
+}
+
+
+/* Keep transitions subtle */
+
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .fc,
+html[data-theme="dark"] .pc,
+html[data-theme="dark"] .ft div,
+html[data-theme="dark"] .tm2,
+html[data-theme="dark"] .btn,
+html[data-theme="dark"] header {
+    transition: background .35s ease, border-color .3s ease, box-shadow .3s ease, color .3s ease;
+}
+
+
+/* Respect reduced-motion preference */
+
+@media (prefers-reduced-motion: reduce) {
+    html[data-theme="dark"] *,
+    html[data-theme="dark"] *::before,
+    html[data-theme="dark"] *::after {
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+
+/* ======================================================================
+   SECTION: IMAGE GALLERY + FLIGHT TEST ARCHIVE + VIDEO MEDIA
+   Added to the complete black / electric-blue neon stylesheet.
+   ====================================================================== */
+
+
+/* Shared media section spacing and typography */
+
+html[data-theme="dark"] .gal,
+html[data-theme="dark"] .ftt,
+html[data-theme="dark"] .fl,
+html[data-theme="dark"] .vf {
+    color: #eaf4ff;
+}
+
+html[data-theme="dark"] .gal figure,
+html[data-theme="dark"] .fta,
+html[data-theme="dark"] .fc,
+html[data-theme="dark"] .vf video {
+    background: linear-gradient(145deg, rgba(8, 18, 38, .96), rgba(3, 8, 20, .98));
+    border: 1px solid rgba(0, 153, 255, .28);
+    box-shadow: 0 12px 34px rgba(0, 0, 0, .34), 0 0 18px rgba(0, 132, 255, .08);
+}
+
+html[data-theme="dark"] .gal figure:hover,
+html[data-theme="dark"] .fta:hover,
+html[data-theme="dark"] .fc:hover {
+    border-color: rgba(0, 190, 255, .72);
+    box-shadow: 0 16px 38px rgba(0, 0, 0, .42), 0 0 24px rgba(0, 153, 255, .20);
+    transform: translateY(-4px);
+}
+
+
+/* Photo gallery */
+
+.gal figure {
+    overflow: hidden;
+    border-radius: 18px;
+    transition: transform .28s ease, border-color .28s ease, box-shadow .28s ease;
+}
+
+.gal .gi,
+.gal .gi img,
+.gal figure img {
+    display: block;
+    width: 100%;
+}
+
+.gal .gi {
+    overflow: hidden;
+    aspect-ratio: 16 / 10;
+    background: #071326;
+}
+
+.gal .gi img,
+.gal figure img {
+    height: 100%;
+    object-fit: cover;
+    transition: transform .55s ease, filter .35s ease;
+}
+
+.gal figure:hover .gi img,
+.gal figure:hover img {
+    transform: scale(1.045);
+    filter: saturate(1.08) contrast(1.04);
+}
+
+html[data-theme="dark"] .gal figcaption {
+    top: 12px;
+    left: 12px;
+    right: auto;
+    bottom: auto;
+    color: #fff;
+    background: rgba(0, 8, 20, .68);
+    border: 1px solid rgba(40, 162, 255, .38);
+    border-radius: 8px;
+}
+
+
+/* Expanding flight-test image strip */
+
+.ftt {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    min-height: 300px;
+    margin-top: 28px;
+    overflow: hidden;
+}
+
+.ftt .fta {
+    position: relative;
+    display: block;
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 300px;
+    overflow: hidden;
+    border-radius: 18px;
+    transition: flex .45s ease, border-color .25s ease, box-shadow .25s ease;
+}
+
+.ftt .fta.on {
+    flex: 3.2 1 0;
+    border-color: rgba(0, 190, 255, .78);
+    box-shadow: 0 0 28px rgba(0, 153, 255, .19);
+}
+
+.ftt .fta img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .55s ease, filter .35s ease;
+}
+
+.ftt .fta:hover img {
+    transform: scale(1.035);
+}
+
+html[data-theme="dark"] .ftt .fta::after {
+    background: linear-gradient(180deg, transparent 38%, rgba(2, 8, 20, .88));
+}
+
+html[data-theme="dark"] .ftt .fta .cap,
+html[data-theme="dark"] .ftt .fta .num {
+    color: #f2f8ff;
+}
+
+
+/* Flight log cards */
+
+.fl {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 28px;
+}
+
+.fc {
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 18px;
+    transition: transform .28s ease, border-color .28s ease, box-shadow .28s ease;
+}
+
+.fc img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+html[data-theme="dark"] .fc h3,
+html[data-theme="dark"] .fc p,
+html[data-theme="dark"] .fc small,
+html[data-theme="dark"] .fc .cp {
+    color: #e5f1ff;
+}
+
+
+/* CHETAK video player */
+
+.w.vf {
+    display: grid;
+    grid-template-columns: minmax(240px, .8fr) minmax(0, 1.5fr);
+    align-items: center;
+    gap: clamp(24px, 5vw, 64px);
+}
+
+.vf video {
+    display: block;
+    width: 100%;
+    max-height: 620px;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    border-radius: 20px;
+    background: #020711;
+}
+
+html[data-theme="dark"] .vf video {
+    border: 1px solid rgba(0, 153, 255, .42);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, .45), 0 0 28px rgba(0, 132, 255, .13);
+}
+
+@media (max-width: 900px) {
+    .fl {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .w.vf {
+        grid-template-columns: 1fr;
+    }
+    .ftt {
+        min-height: 260px;
+    }
+    .ftt .fta {
+        min-height: 260px;
+    }
+}
+
+@media (max-width: 600px) {
+    .gal {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .fl {
+        grid-template-columns: 1fr;
+    }
+    .ftt {
+        min-height: 220px;
+        gap: 7px;
+    }
+    .ftt .fta {
+        min-height: 220px;
+        border-radius: 12px;
+    }
+    .ftt .fta.on {
+        flex: 2.6 1 0;
+    }
+    .vf video {
+        border-radius: 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .gal figure,
+    .gal img,
+    .fta,
+    .fta img,
+    .fc {
+        transition: none !important;
+    }
+}
+
+
+/* =========================================================
+   UNITY SPACE — NOV 09 FINAL EXPLORE + UPCOMING EVENTS UPDATE
+   - Desktop Upcoming Events card sits at the hero bottom-right,
+     below the fixed navbar stacking layer.
+   - Explore gallery shows exactly three equal image columns.
+   - Explore video gallery shows two equal video columns.
+   - Video headings sit at the top-left over each video;
+     no title/caption is shown underneath the player.
+   - Mobile layouts remain responsive and avoid navbar overlap.
+   ========================================================= */
+
+
+/* Keep the fixed navbar above hero overlays. */
+
+header,
+header.hm,
+header.hm.sc {
+    z-index: 20;
+}
+
+
+/* Desktop/tablet Upcoming Events placement. */
+
+@media (min-width: 601px) {
+    .hero {
+        position: relative;
+        isolation: isolate;
+    }
+    .hero>.events,
+    .hero .events {
+        position: absolute;
+        top: auto;
+        right: 24px;
+        bottom: 24px;
+        left: auto;
+        z-index: 3;
+        width: min(340px, calc(100vw - 48px));
+        margin: 0;
+    }
+}
+
+
+/* Explore image gallery: three images in one horizontal row. */
+
+.gal {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-rows: auto;
+    gap: 18px;
+    width: 100%;
+    margin-top: 24px;
+}
+
+.gal figure {
+    position: relative;
+    grid-column: auto !important;
+    width: 100%;
+    min-width: 0;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: var(--soft);
+}
+
+.gal figure .gi {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
+}
+
+.gal figure .gi img,
+.gal figure>img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform .55s ease;
+}
+
+.gal figure:hover .gi img,
+.gal figure:hover>img {
+    transform: scale(1.045);
+}
+
+.gal figcaption {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    right: auto;
+    bottom: auto;
+    z-index: 5;
+    max-width: calc(100% - 24px);
+    padding: 9px 13px;
+    margin: 0;
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.35;
+    background: rgba(0, 0, 0, .58);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+
+/* Explore videos: two equal cards on desktop. */
+
+.vids,
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    width: 100%;
+    margin-top: 24px;
+    align-items: stretch;
+}
+
+
+/* Support the existing .vt video-tile markup. */
+
+.vt {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    min-width: 0;
+    aspect-ratio: auto;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: #000;
+}
+
+.vt .th {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #000;
+}
+
+.vt .th img,
+.vt .th video,
+.vt .th iframe {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.vt .pb {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+
+/* Move the existing video title to the top-left overlay. */
+
+.vt .m {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 34px 16px 18px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .78), transparent);
+    pointer-events: none;
+}
+
+.vt .m b {
+    display: block;
+    width: fit-content;
+    color: #fff;
+    font-size: clamp(15px, 1.5vw, 19px);
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: .01em;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, .55);
+}
+
+.vt .m small {
     display: none !important;
 }
 
-.view:not([hidden]) {
-    display: block !important;
-}
 
+/* Support the standalone .video-card markup as well. */
 
-/* Horizontal line – theme-based color */
-
-.h-line {
-    border: none;
-    height: 2px;
-    width: 100%;
-    margin: 25px 0;
-    background: linear-gradient( to right, var(--line-color), transparent);
-}
-
-
-/* Dark Theme – Blue */
-
-html[data-theme="dark"] {
-    --line-color: #28A2DE;
-}
-
-
-/* =====================================================
-   UNITY SPACE - UPCOMING EVENTS
-   Transparent 3D Vertical Cylinder Animation
-===================================================== */
-
-
-/* Hero parent */
-
-.hero {
+.video-card {
     position: relative;
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: #000;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, .12);
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #000;
+}
+
+.video-wrapper video,
+.video-wrapper iframe {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border: 0;
+    background: #000;
+}
+
+.video-info {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 34px 16px 18px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .82), transparent);
+    pointer-events: none;
+}
+
+.video-info h3 {
+    width: fit-content;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0;
+    color: #fff;
+    font-size: clamp(15px, 1.5vw, 19px);
+    font-weight: 700;
+    line-height: 1.25;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, .6);
+}
+
+.video-info p {
+    display: none !important;
 }
 
 
-/* Main event container */
+/* Black + electric-blue neon styling for the new media cards. */
 
-.events {
-    position: absolute;
-    right: 45px;
-    bottom: 38px;
-    width: 340px;
-    z-index: 20;
+html[data-theme="dark"] .gal figure,
+html[data-theme="dark"] .vt,
+html[data-theme="dark"] .video-card {
+    border-color: rgba(40, 162, 255, .38);
+    box-shadow: 0 8px 26px rgba(0, 0, 0, .28), 0 0 16px rgba(40, 162, 255, .07);
+}
+
+html[data-theme="dark"] .gal figure:hover,
+html[data-theme="dark"] .vt:hover,
+html[data-theme="dark"] .video-card:hover {
+    border-color: rgba(85, 210, 255, .75);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .34), 0 0 22px rgba(40, 162, 255, .18);
+}
+
+
+/* Mobile: stack media cards to keep them readable and usable. */
+
+@media (max-width: 600px) {
+    .gal {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+    }
+    .gal figure {
+        grid-column: 1 / -1 !important;
+        aspect-ratio: 4 / 3;
+    }
+    .vids,
+    .video-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+    .vt,
+    .video-card {
+        width: 100%;
+    }
+    .vt .th,
+    .video-wrapper {
+        aspect-ratio: 16 / 9;
+    }
+    .vt .m,
+    .video-info {
+        padding: 30px 13px 16px;
+    }
+    .vt .m b,
+    .video-info h3 {
+        font-size: 16px;
+    }
+    /* Keep the event card below the fixed mobile navbar. */
+    .hero>.events {
+        display: block;
+        position: relative;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+        align-self: flex-end;
+        width: min(340px, calc(100% - 20px));
+        max-width: 340px;
+        margin: calc(72px + env(safe-area-inset-top, 0px) + 10px) 10px 22px auto;
+        z-index: 3;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .gal figure .gi img,
+    .gal figure>img {
+        transition: none;
+    }
+}
+
+
+/* =========================================================
+   UNITY SPACE — MEDIA, ABOUT, PARTNERS & MOBILE NAV REFINEMENTS
+   NOV 10 — final overrides
+   ========================================================= */
+
+
+/* Video tiles: make the card exactly the size of its video.
+   Remove the extra caption/footer area and video name. */
+
+#v-home .vids .vt,
+#v-home .vids .vt-playing,
+.vids .vt,
+.vids .vt-playing {
+    display: block;
+    position: relative;
+    align-self: start;
+    height: auto;
+    min-height: 0;
     padding: 0;
     margin: 0;
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    text-align: right;
+    overflow: hidden;
+    border-radius: 16px;
+    line-height: 0;
+}
+
+#v-home .vids .vt .th,
+#v-home .vids .vt-playing .th,
+.vids .vt .th,
+.vids .vt-playing .th {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#v-home .vids .vt .th video,
+#v-home .vids .vt-playing .th video,
+.vids .vt .th video,
+.vids .vt-playing .th video {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#v-home .vids .vt .m,
+#v-home .vids .vt-playing .m,
+.vids .vt .m,
+.vids .vt-playing .m {
+    display: none !important;
 }
 
 
-/* Heading */
+/* Flight Test image viewer: always show a clear close control.
+   The existing page script closes the viewer and reveals Media again. */
+
+.flight-image-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    padding: 64px 20px 24px;
+    background: rgba(0, 0, 0, .94);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+}
+
+.flight-image-modal.is-open {
+    display: flex;
+}
+
+.flight-image-modal img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: min(100%, 1200px);
+    max-height: calc(100vh - 130px);
+    max-height: calc(100svh - 130px);
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+.flight-image-close {
+    position: fixed;
+    top: max(18px, env(safe-area-inset-top, 0px));
+    right: max(18px, env(safe-area-inset-right, 0px));
+    z-index: 10001;
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, .65);
+    border-radius: 50%;
+    background: rgba(10, 18, 30, .82);
+    color: #fff;
+    font: 400 32px/1 Arial, sans-serif;
+    cursor: pointer;
+    box-shadow: 0 4px 22px rgba(0, 0, 0, .4);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.flight-image-close:hover,
+.flight-image-close:focus-visible {
+    background: #28a2ff;
+    color: #03101d;
+    border-color: #55dfff;
+}
+
+.flight-image-caption {
+    max-width: min(900px, 100%);
+    margin: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+body.image-viewer-open {
+    overflow: hidden;
+    touch-action: none;
+}
+
+
+/* Sponsorship / partners page: remove any message form if present. */
+
+#v-partners form,
+#v-partners .cf,
+#v-partners .send-message-form {
+    display: none !important;
+}
+
+@media (max-width: 600px) {
+    /* Mobile navbar: brighter translucent blue glass effect. */
+    header,
+    header.hm,
+    header.hm.sc {
+        background: rgba(18, 112, 174, .76) !important;
+        border-bottom: 1px solid rgba(160, 225, 255, .38) !important;
+        -webkit-backdrop-filter: blur(20px) saturate(155%);
+        backdrop-filter: blur(20px) saturate(155%);
+        box-shadow: 0 8px 28px rgba(0, 0, 0, .16);
+    }
+    header .logo,
+    header .tgl,
+    header .ham,
+    header .dots3 button {
+        color: #fff !important;
+    }
+    header .tgl,
+    header .ham,
+    header .dots3 button {
+        background: rgba(255, 255, 255, .16) !important;
+        border-color: rgba(255, 255, 255, .42) !important;
+    }
+    header .ham span {
+        background: #fff;
+    }
+    header .unfl,
+    header .mpanel {
+        background: rgba(7, 27, 48, .94) !important;
+        border-color: rgba(100, 205, 255, .38) !important;
+        -webkit-backdrop-filter: blur(18px);
+        backdrop-filter: blur(18px);
+    }
+    /* Flight Test frame strip: keep the full available width but make
+       each collapsed frame short. Hide labels until the image is opened. */
+    #v-media #ftt.ftt {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        gap: 9px;
+        margin-top: 22px;
+    }
+    #v-media #ftt .fta,
+    #v-media #ftt .fta.on {
+        display: block;
+        flex: none;
+        width: 100%;
+        min-width: 0;
+        height: 76px;
+        border-radius: 12px;
+    }
+    #v-media #ftt .fta img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: none;
+    }
+    #v-media #ftt .fta .cap {
+        display: none !important;
+    }
+    #v-media #ftt .fta .num {
+        left: 10px;
+        top: 8px;
+        font-size: 11px;
+    }
+    /* On phone, the image viewer fills the screen and keeps the close
+       button visible above the image. The caption appears only in viewer. */
+    .flight-image-modal {
+        padding: max(70px, calc(env(safe-area-inset-top, 0px) + 64px)) 10px 18px;
+        gap: 10px;
+    }
+    .flight-image-modal img {
+        width: 100%;
+        max-width: 100%;
+        max-height: calc(100svh - 150px);
+        border-radius: 8px;
+    }
+    .flight-image-close {
+        top: max(12px, env(safe-area-inset-top, 0px));
+        right: 12px;
+        width: 44px;
+        height: 44px;
+        font-size: 30px;
+    }
+    .flight-image-caption {
+        padding: 0 8px;
+        font-size: 14px;
+    }
+    /* About page: image first, then the story/content. */
+    #v-about .ab {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+        align-items: start;
+    }
+    #v-about .ab .abimg {
+        grid-row: 1;
+        width: 100%;
+        margin: 0;
+    }
+    #v-about .ab>div:first-child {
+        grid-row: 2;
+        width: 100%;
+        min-width: 0;
+    }
+    /* Contact page: hide the social icon row above the form on phones only. */
+    #v-contact .soc2 {
+        display: none !important;
+    }
+    /* Ensure any message form on the Partners page stays removed on mobile. */
+    #v-partners form,
+    #v-partners .cf,
+    #v-partners .send-message-form {
+        display: none !important;
+    }
+}
+
+@media (max-width: 380px) {
+    #v-media #ftt .fta,
+    #v-media #ftt .fta.on {
+        height: 68px;
+    }
+}
+
+
+/* =========================================================
+   UNITY SPACE — FLIGHT LOG, MOBILE FRAME VIEWER & EVENTS GLASS
+   NOV 10 — requested layout refinements
+   ========================================================= */
+
+
+/* FLIGHT LOG: two cards per row on laptop and tablet. */
+
+#v-flightlog .fl,
+.fl {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+#v-flightlog .fc,
+.fl .fc {
+    width: 100%;
+    min-width: 0;
+}
+
+
+/* Flight-test frame strip: disable opening/clicking on laptop and tablet. */
+
+#v-media #ftt .fta {
+    pointer-events: none;
+    cursor: default;
+}
+
+
+/* UPCOMING EVENTS: frosted-glass card on laptop and tablet. */
+
+.events {
+    background: rgba(8, 20, 36, .58) !important;
+    border: 1px solid rgba(255, 255, 255, .24) !important;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, .24), inset 0 1px 0 rgba(255, 255, 255, .13), 0 0 24px rgba(40, 162, 255, .10);
+    -webkit-backdrop-filter: blur(18px) saturate(155%);
+    backdrop-filter: blur(18px) saturate(155%);
+}
 
 .ev-heading {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 3px;
-    color: #28A2DE;
-    margin-bottom: 12px;
-    background: transparent;
+    position: relative;
+    z-index: 2;
+    padding: 11px 14px 8px;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .16em;
+    border-bottom: 1px solid rgba(255, 255, 255, .13);
 }
-
-
-/* Cylinder viewing window */
 
 .ev-window {
     width: 100%;
-    height: 85px;
-    position: relative;
     overflow: hidden;
-    perspective: 650px;
-    perspective-origin: center center;
-    background: transparent !important;
 }
-
-
-/* Rotating cylinder */
 
 .ev-track {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    inset: 0;
-    transform-style: preserve-3d;
-    transform-origin: center center;
-    animation: unityEventCylinder 12s cubic-bezier(0.65, 0, 0.35, 1) infinite;
-    will-change: transform;
-}
-
-
-/* Individual cylinder faces */
-
-.ev-item {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 85px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    text-align: right;
-    background: transparent !important;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
+    width: 100%;
 }
 
 
-/* Three cylindrical positions */
+/* Each event: logo on the left, details on the right. */
 
-.ev-item:nth-child(1) {
-    transform: rotateX(0deg) translateZ(49.07px);
+.ev-item,
+.ev-item.ev-slide {
+    flex: 0 0 100%;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    min-width: 0;
+    min-height: 100px;
+    padding: 12px 14px;
 }
 
-.ev-item:nth-child(2) {
-    transform: rotateX(120deg) translateZ(49.07px);
+.ev-item .ev-logo {
+    display: block;
+    flex: 0 0 64px;
+    width: 64px;
+    height: 64px;
+    max-width: 64px;
+    object-fit: contain;
+    padding: 5px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, .09);
+    border: 1px solid rgba(255, 255, 255, .15);
+    animation: none;
 }
 
-.ev-item:nth-child(3) {
-    transform: rotateX(240deg) translateZ(49.07px);
+.ev-item .ev-text {
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 0 0 0 7px;
 }
 
+.ev-item .ev-text h2 {
+    min-width: 0;
+    max-width: none;
+    margin: 0 0 5px;
+    color: #fff;
+    font-size: clamp(15px, 1.35vw, 19px);
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+}
 
-/* Event title */
-
-.ev-item h2 {
+.ev-item .ev-text p {
     margin: 0;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 21px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    color: #ffffff;
-    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+    color: rgba(232, 243, 255, .82);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.4;
 }
 
 
-/* Event description */
+/* Keep the dots clear of the event content. */
 
-.ev-item p {
-    margin: 7px 0 0;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 11px;
-    font-weight: 400;
-    color: rgba(255, 255, 255, 0.75);
+.events .ev-dots {
+    bottom: 7px;
 }
 
-
-/* =====================================================
-   CYLINDRICAL ROTATION ANIMATION
-===================================================== */
-
-@keyframes unityEventCylinder {
-    0%,
-    25% {
-        transform: rotateX(0deg);
+@media (max-width: 900px) and (min-width: 601px) {
+    #v-flightlog .fl,
+    .fl {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-    33.33%,
-    58.33% {
-        transform: rotateX(-120deg);
-    }
-    66.66%,
-    91.66% {
-        transform: rotateX(-240deg);
-    }
-    100% {
-        transform: rotateX(-360deg);
-    }
-}
-
-
-/* Pause on hover */
-
-.events:hover .ev-track {
-    animation-play-state: paused;
-}
-
-
-/* =====================================================
-   TABLET RESPONSIVE
-===================================================== */
-
-@media (min-width: 601px) and (max-width: 1024px) {
     .events {
-        width: 280px;
-        right: 25px;
-        bottom: 30px;
-    }
-    .ev-item h2 {
-        font-size: 19px;
-    }
-    .ev-item p {
-        font-size: 10px;
+        width: min(340px, calc(100vw - 48px));
     }
 }
-
-
-/* =====================================================
-   MOBILE RESPONSIVE - TOP RIGHT
-===================================================== */
 
 @media (max-width: 600px) {
-    .events {
-        position: absolute;
-        top: 100px;
-        right: 16px;
-        bottom: auto;
-        left: auto;
-        width: 190px;
-        max-width: 55%;
-        z-index: 20;
-        background: transparent !important;
-        border: none !important;
-        box-shadow: none !important;
-        text-align: right;
+    /* Keep flight-log cards readable on narrow phone screens. */
+    #v-flightlog .fl,
+    .fl {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
     }
-    .ev-heading {
-        font-size: 8px;
-        letter-spacing: 2px;
-        margin-bottom: 6px;
+    /* The flight-test frame viewer is clickable only on mobile. */
+    #v-media #ftt .fta {
+        pointer-events: auto;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
     }
-    .ev-window {
+    /* Full-width event card at the bottom of the mobile hero/video area. */
+    .hero>.events,
+    .hero .events {
+        display: block !important;
+        position: relative;
+        inset: auto;
+        order: 3;
+        align-self: stretch;
+        width: 100%;
+        max-width: none;
+        margin: 24px 0 0;
+        border-radius: 14px 14px 0 0;
+        z-index: 3;
+    }
+    .hero>.w.g {
+        order: 2;
+    }
+    .ev-item,
+    .ev-item.ev-slide {
+        min-height: 92px;
+        gap: 7px;
+        padding: 10px 12px 16px;
+    }
+    .ev-item .ev-logo {
+        flex-basis: 58px;
+        width: 58px;
         height: 58px;
-        perspective: 500px;
+        max-width: 58px;
     }
-    .ev-track {
-        height: 58px;
+    .ev-item .ev-text {
+        padding-left: 7px;
     }
-    .ev-item {
-        height: 58px;
+    .ev-item .ev-text h2 {
+        font-size: 16px;
     }
-    .ev-item:nth-child(1) {
-        transform: rotateX(0deg) translateZ(33.49px);
-    }
-    .ev-item:nth-child(2) {
-        transform: rotateX(120deg) translateZ(33.49px);
-    }
-    .ev-item:nth-child(3) {
-        transform: rotateX(240deg) translateZ(33.49px);
-    }
-    .ev-item h2 {
-        font-size: 14px;
-        line-height: 1.3;
-    }
-    .ev-item p {
-        font-size: 8px;
-        margin-top: 4px;
+    .ev-item .ev-text p {
+        font-size: 11px;
     }
 }
-
-
-/* =====================================================
-   EXTRA SMALL MOBILE
-===================================================== */
-
-@media (max-width: 380px) {
-    .events {
-        top: 90px;
-        right: 12px;
-        width: 165px;
-    }
-    .ev-heading {
-        font-size: 7px;
-        letter-spacing: 1.5px;
-    }
-    .ev-item h2 {
-        font-size: 12px;
-    }
-    .ev-item p {
-        font-size: 7px;
-    }
-}
-
-
-/* =====================================================
-   ACCESSIBILITY
-===================================================== */
 
 @media (prefers-reduced-motion: reduce) {
-    .ev-track {
-        animation: none;
+    .ev-track,
+    .ev-item .ev-logo {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+
+/* =========================================================
+   UNITY SPACE — NOV 10 SCROLL, FLIGHT LOG VIDEO, FOOTER & MOBILE VIEWER
+   ========================================================= */
+
+
+/* Keep the site background stationary while all page content scrolls. */
+
+html[data-theme="dark"],
+html[data-theme="dark"] body {
+    min-height: 100%;
+}
+
+html[data-theme="dark"] body {
+    background-attachment: fixed !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+}
+
+
+/* Let the fixed body background show through while sections move normally. */
+
+html[data-theme="dark"] main,
+html[data-theme="dark"] .view,
+html[data-theme="dark"] section {
+    background-attachment: scroll;
+}
+
+html[data-theme="dark"] section.soft {
+    background: linear-gradient(135deg, rgba(10, 24, 43, .68), rgba(5, 11, 21, .76)) !important;
+}
+
+html[data-theme="dark"] section.dark {
+    background: radial-gradient(ellipse at 85% 15%, rgba(0, 130, 255, .10), transparent 55%), rgba(5, 8, 15, .42) !important;
+}
+
+
+/* FLIGHT LOG — CHETAK-3 video uses the same 16:9 media-card frame
+   as the first Explore video. This desktop/laptop rule does not
+   alter the existing mobile layout. */
+
+@media (min-width: 601px) {
+    #v-flightlog .vf {
+        grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+        align-items: center;
+        gap: clamp(22px, 4vw, 48px);
+    }
+    #v-flightlog .vf>div:last-child {
+        position: relative;
+        width: 100%;
+        min-width: 0;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+        border: 1px solid rgba(40, 162, 255, .38);
+        border-radius: 16px;
+        background: #000;
+        box-shadow: 0 8px 26px rgba(0, 0, 0, .28), 0 0 16px rgba(40, 162, 255, .07);
+    }
+    #v-flightlog .vf>div:last-child video {
+        position: absolute;
+        inset: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        max-height: none;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        object-position: center;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        background: #000;
+    }
+}
+
+
+/* FOOTER — center the social icons horizontally on the footer divider. */
+
+#ft .sup {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: center;
+    gap: 16px;
+    border-top: 1px solid var(--line);
+    padding-top: 20px;
+}
+
+#ft .sup>div:first-child {
+    grid-column: 1;
+    justify-self: start;
+}
+
+#ft .sup .soc {
+    grid-column: 2;
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+#ft .sup .soc a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    margin: 0;
+    color: #dcecff;
+    border: 1px solid rgba(40, 162, 255, .28);
+    border-radius: 50%;
+    background: rgba(40, 162, 255, .08);
+    transition: background .2s ease, border-color .2s ease, transform .2s ease;
+}
+
+#ft .sup .soc a:hover {
+    color: #fff;
+    background: rgba(40, 162, 255, .2);
+    border-color: rgba(85, 210, 255, .75);
+    transform: translateY(-2px);
+}
+
+#ft .sup .soc svg {
+    width: 19px;
+    height: 19px;
+}
+
+
+/* MOBILE HEADER — keep the same black + electric-blue palette as laptop. */
+
+@media (max-width: 600px) {
+    header,
+    header.hm,
+    header.hm.sc {
+        background: #05080f !important;
+        border-bottom: 1px solid rgba(40, 162, 255, .24) !important;
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+    }
+    header .logo,
+    header .links a,
+    header .mpanel a,
+    header .unfl a {
+        color: #eef7ff !important;
+    }
+    header .tgl,
+    header .ham,
+    header .dots3 button {
+        color: #fff !important;
+        background: rgba(40, 162, 255, .14) !important;
+        border: 1px solid rgba(40, 162, 255, .52) !important;
+        box-shadow: 0 0 14px rgba(40, 162, 255, .10);
+    }
+    header .ham span {
+        background: #55d6ff !important;
+    }
+    header .mpanel,
+    header .unfl {
+        background: #071b30 !important;
+        border: 1px solid rgba(40, 162, 255, .38) !important;
+    }
+    header .links a.on,
+    header .mpanel a.on,
+    header .unfl a.on {
+        color: #fff !important;
+        background: rgba(40, 162, 255, .20) !important;
+    }
+    /* Social icons remain centered on the footer divider on phones too. */
+    #ft .sup {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+    }
+    #ft .sup>div:first-child,
+    #ft .sup .soc {
+        grid-column: 1;
+        justify-self: center;
+    }
+}
+
+
+/* MOBILE FLIGHT-TEST FRAME STRIP — vertical sliding cards. */
+
+@media (max-width: 700px) {
+    #v-media #ftt.ftt {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        min-height: 0;
+        height: auto;
+        gap: 10px;
+        overflow: visible;
+        margin-top: 22px;
+    }
+    #v-media #ftt .fta,
+    #v-media #ftt .fta.on {
+        position: relative;
+        display: block;
+        flex: none;
+        width: 100%;
+        min-width: 0;
+        min-height: 0;
+        height: clamp(112px, 30vw, 160px);
+        overflow: hidden;
+        border: 1px solid rgba(40, 162, 255, .34);
+        border-radius: 14px;
+        background: #05080f;
+        cursor: pointer;
+        pointer-events: auto;
+        animation: unityFrameSlideIn .55s both;
+        -webkit-tap-highlight-color: transparent;
+    }
+    #v-media #ftt .fta:nth-child(2) {
+        animation-delay: .06s;
+    }
+    #v-media #ftt .fta:nth-child(3) {
+        animation-delay: .12s;
+    }
+    #v-media #ftt .fta:nth-child(4) {
+        animation-delay: .18s;
+    }
+    #v-media #ftt .fta:nth-child(5) {
+        animation-delay: .24s;
+    }
+    #v-media #ftt .fta:nth-child(6) {
+        animation-delay: .30s;
+    }
+    #v-media #ftt .fta:nth-child(7) {
+        animation-delay: .36s;
+    }
+    #v-media #ftt .fta:nth-child(8) {
+        animation-delay: .42s;
+    }
+    #v-media #ftt .fta img {
+        position: absolute;
+        inset: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
         transform: none;
     }
-    .ev-item:not(:first-child) {
+    #v-media #ftt .fta::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: linear-gradient(90deg, rgba(0, 0, 0, .62), transparent 72%), linear-gradient(0deg, rgba(0, 0, 0, .38), transparent 60%);
+        pointer-events: none;
+    }
+    #v-media #ftt .fta .cap {
+        display: block !important;
+        position: absolute;
+        z-index: 2;
+        left: 12px;
+        right: 12px;
+        bottom: 10px;
+        color: #fff;
+        text-align: left;
+        pointer-events: none;
+    }
+    #v-media #ftt .fta .cap b {
+        display: block;
+        font-size: 14px;
+        line-height: 1.25;
+    }
+    #v-media #ftt .fta .cap small {
+        display: block;
+        margin-top: 3px;
+        color: rgba(235, 245, 255, .82);
+        font-size: 10px;
+    }
+    #v-media #ftt .fta .num {
         display: none;
     }
 }
 
-
-/*  
-   UPCOMING EVENTS - THEME COLOR MATCHING
-  */
-
-
-/* Light theme */
-
-html[data-theme="light"] .events {
-    --event-accent: #faa308;
+@keyframes unityFrameSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
-/* Dark theme */
+/* MOBILE IMAGE VIEWER — created by the appended JavaScript. */
 
-html[data-theme="dark"] .events {
-    --event-accent: #28A2DE;
+.unity-frame-viewer[hidden] {
+    display: none !important;
+}
+
+.unity-frame-viewer {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: max(68px, env(safe-area-inset-top, 0px) + 58px) 12px 22px;
+    background: rgba(1, 5, 12, .96);
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+}
+
+.unity-frame-viewer img {
+    display: block;
+    width: 100%;
+    max-width: 1100px;
+    max-height: calc(100svh - 150px);
+    object-fit: contain;
+    border: 1px solid rgba(40, 162, 255, .34);
+    border-radius: 12px;
+    background: #000;
+    box-shadow: 0 12px 44px rgba(0, 0, 0, .5);
+}
+
+.unity-frame-viewer .unity-frame-viewer-caption {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0;
+    color: #eef7ff;
+    font-size: 14px;
+    text-align: center;
+}
+
+.unity-frame-viewer .unity-frame-viewer-close {
+    position: absolute;
+    top: max(12px, env(safe-area-inset-top, 0px));
+    right: 12px;
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    padding: 0;
+    border: 1px solid rgba(85, 210, 255, .65);
+    border-radius: 50%;
+    color: #fff;
+    background: rgba(40, 162, 255, .18);
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+body.unity-frame-viewer-open {
+    overflow: hidden;
+}
+
+@media (min-width: 701px) {
+    #v-media #ftt .fta {
+        pointer-events: none;
+        cursor: default;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #v-media #ftt .fta {
+        animation: none !important;
+    }
 }
 
 
-/* Apply the active theme accent */
+/* Native button reset for the frame cards (the HTML uses buttons for safe mobile viewing). */
 
-.events .ev-heading {
-    color: var(--event-accent) !important;
-    transition: color 0.3s ease;
+#v-media #ftt .fta {
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    text-align: left;
 }
 
 
-/* Event titles */
+/* =========================================================
+   UNITY SPACE — FINAL REQUESTED POLISH
+   Mobile bright-theme navbar, bright-theme footer icons,
+   stationary background and scroll-driven card motion.
+   ========================================================= */
 
-.events .ev-item h2 {
-    color: var(--event-accent);
-    transition: color 0.3s ease;
+
+/* 1) MOBILE NAVBAR — bright-theme orange + frosted glass.
+   Dark theme keeps its existing electric-blue navbar styling. */
+
+@media (max-width: 600px) {
+    html:not([data-theme="dark"]) header,
+    html:not([data-theme="dark"]) header.hm,
+    html:not([data-theme="dark"]) header.hm.sc {
+        background: rgba(10, 10, 10, .70) !important;
+        color: #fff !important;
+        border-bottom: 1px solid var(--blue, #faa308) !important;
+        -webkit-backdrop-filter: blur(20px) saturate(155%);
+        backdrop-filter: blur(20px) saturate(155%);
+        box-shadow: 0 5px 22px rgba(0, 0, 0, .20), 0 1px 12px rgba(250, 163, 8, .13);
+    }
+    html:not([data-theme="dark"]) header .logo,
+    html:not([data-theme="dark"]) header .links a,
+    html:not([data-theme="dark"]) header .mpanel a,
+    html:not([data-theme="dark"]) header .unfl a {
+        color: #fff !important;
+    }
+    html:not([data-theme="dark"]) header .tgl,
+    html:not([data-theme="dark"]) header .ham,
+    html:not([data-theme="dark"]) header .dots3 button {
+        color: var(--blue, #faa308) !important;
+        background: rgba(250, 163, 8, .11) !important;
+        border: 1px solid rgba(250, 163, 8, .68) !important;
+        box-shadow: 0 0 12px rgba(250, 163, 8, .13);
+    }
+    html:not([data-theme="dark"]) header .ham span {
+        background: var(--blue, #faa308) !important;
+    }
+    html:not([data-theme="dark"]) header .mpanel,
+    html:not([data-theme="dark"]) header .unfl {
+        background: rgba(15, 15, 15, .76) !important;
+        border: 1px solid rgba(250, 163, 8, .48) !important;
+        -webkit-backdrop-filter: blur(22px) saturate(155%);
+        backdrop-filter: blur(22px) saturate(155%);
+        box-shadow: 0 12px 35px rgba(0, 0, 0, .32);
+    }
+    html:not([data-theme="dark"]) header .links a.on,
+    html:not([data-theme="dark"]) header .mpanel a.on,
+    html:not([data-theme="dark"]) header .unfl a.on {
+        color: var(--blue, #faa308) !important;
+        background: rgba(250, 163, 8, .16) !important;
+        border-radius: 8px;
+    }
 }
 
 
-/* Event descriptions remain readable */
+/* 2) BRIGHT THEME FOOTER — orange icon borders and soft glow. */
 
-.events .ev-item p {
-    color: rgba(255, 255, 255, 0.75);
+html:not([data-theme="dark"]) #ft .soc a,
+html:not([data-theme="dark"]) #ft .soc2 a,
+html:not([data-theme="dark"]) footer .soc a,
+html:not([data-theme="dark"]) footer .soc2 a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin: 0 7px;
+    color: var(--blue, #faa308) !important;
+    border: 1px solid rgba(250, 163, 8, .76);
+    border-radius: 50%;
+    background: rgba(250, 163, 8, .07);
+    box-shadow: 0 0 8px rgba(250, 163, 8, .18), 0 0 18px rgba(250, 163, 8, .10);
+    transition: transform .28s ease, background .28s ease, box-shadow .28s ease, border-color .28s ease;
+}
+
+html:not([data-theme="dark"]) #ft .soc a:hover,
+html:not([data-theme="dark"]) #ft .soc2 a:hover,
+html:not([data-theme="dark"]) footer .soc a:hover,
+html:not([data-theme="dark"]) footer .soc2 a:hover {
+    color: #fff !important;
+    background: rgba(250, 163, 8, .22);
+    border-color: #faa308;
+    box-shadow: 0 0 12px rgba(250, 163, 8, .38), 0 0 28px rgba(250, 163, 8, .20);
+    transform: translateY(-4px) scale(1.06);
+}
+
+html:not([data-theme="dark"]) #ft .soc svg,
+html:not([data-theme="dark"]) #ft .soc2 svg,
+html:not([data-theme="dark"]) footer .soc svg,
+html:not([data-theme="dark"]) footer .soc2 svg {
+    width: 19px;
+    height: 19px;
+    stroke: currentColor;
+}
+
+
+/* 3) STATIONARY BACKGROUND — fixed during page scrolling.
+   Keep the existing light/dark background artwork and gradients. */
+
+html,
+body {
+    scroll-behavior: smooth;
+    scroll-padding-top: 82px;
+}
+
+body {
+    background-attachment: fixed !important;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+html[data-theme="dark"] body {
+    background-attachment: fixed !important;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* 4) SCROLL-DRIVEN CARD STORY — cards gently enter, settle,
+   and lift away as the visitor scrolls through the page. */
+
+.card,
+.fc,
+.pc,
+.mc,
+.fcard,
+.tm2,
+.mbox {
+    position: relative;
+    transform-origin: center center;
+    transition: transform .35s ease, box-shadow .35s ease;
+}
+
+@supports (animation-timeline: view()) {
+    .card,
+    .fc,
+    .pc,
+    .mc,
+    .fcard,
+    .tm2,
+    .mbox {
+        animation-name: unityCardScrollStory;
+        animation-duration: 1ms;
+        animation-timing-function: linear;
+        animation-fill-mode: both;
+        animation-timeline: view(block);
+        animation-range: entry 0% exit 100%;
+    }
+    @keyframes unityCardScrollStory {
+        0% {
+            opacity: .72;
+            transform: translateY(42px) scale(.965);
+        }
+        22% {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+        68% {
+            opacity: 1;
+            transform: translateY(-3px) scale(1);
+        }
+        100% {
+            opacity: .82;
+            transform: translateY(-18px) scale(.98);
+        }
+    }
+}
+
+
+/* Layering gives adjacent cards a subtle cinematic overlap
+   without changing the existing grid or card dimensions. */
+
+.card:hover,
+.fc:hover,
+.pc:hover,
+.mc:hover,
+.fcard:hover,
+.tm2:hover,
+.mbox:hover {
+    z-index: 4;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, .16);
+}
+
+
+/* 5) RESPONSIVE MOTION — reduce travel distance on phones. */
+
+@media (max-width: 700px) {
+    html,
+    body {
+        scroll-padding-top: 72px;
+    }
+    .card,
+    .fc,
+    .pc,
+    .mc,
+    .fcard,
+    .tm2,
+    .mbox {
+        will-change: transform, opacity;
+    }
+    @supports (animation-timeline: view()) {
+        .card,
+        .fc,
+        .pc,
+        .mc,
+        .fcard,
+        .tm2,
+        .mbox {
+            animation-range: entry 0% exit 100%;
+        }
+        @keyframes unityCardScrollStory {
+            0% {
+                opacity: .78;
+                transform: translateY(26px) scale(.98);
+            }
+            24% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+            70% {
+                opacity: 1;
+                transform: translateY(-2px) scale(1);
+            }
+            100% {
+                opacity: .86;
+                transform: translateY(-10px) scale(.99);
+            }
+        }
+    }
+}
+
+
+/* 6) ACCESSIBILITY — respect reduced-motion preferences. */
+
+@media (prefers-reduced-motion: reduce) {
+    html,
+    body {
+        scroll-behavior: auto;
+    }
+    .card,
+    .fc,
+    .pc,
+    .mc,
+    .fcard,
+    .tm2,
+    .mbox {
+        animation: none !important;
+        transition: none !important;
+        transform: none !important;
+        will-change: auto;
+    }
+}
+
+
+/* =========================================================
+   UNITY SPACE — FLIGHT TEST RESPONSIVE FRAME SLIDER
+   Laptop: horizontal expanding panels
+   Tablet: horizontal responsive panels
+   Mobile: vertical sliding panels
+   All devices: clickable image viewer
+   ========================================================= */
+
+
+/* Main frame container */
+
+#v-media #ftt.ftt {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+    height: 460px;
+    min-height: 300px;
+    gap: 12px;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+
+/* Individual frame cards */
+
+#v-media #ftt .fta,
+#v-media #ftt .fta.on {
+    position: relative;
+    display: block;
+    flex: 1 1 0;
+    min-width: 0;
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, .18);
+    border-radius: 16px;
+    background: #05080f;
+    color: #fff !important;
+    cursor: pointer;
+    pointer-events: auto !important;
+    transition: flex .65s cubic-bezier(.2, .7, .2, 1), border-color .35s ease, box-shadow .35s ease, transform .35s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* Active / expanded panel */
+
+#v-media #ftt .fta.on {
+    flex: 5 1 0;
+    border-color: rgba(40, 162, 255, .75);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, .28), 0 0 18px rgba(40, 162, 255, .15);
+}
+
+
+/* Frame images */
+
+#v-media #ftt .fta img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1.08);
+    transition: transform .8s cubic-bezier(.2, .7, .2, 1), filter .5s ease;
+}
+
+#v-media #ftt .fta.on img {
+    transform: scale(1);
+}
+
+
+/* Dark gradient for readable white text */
+
+#v-media #ftt .fta::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient( to top, rgba(0, 0, 0, .88) 0%, rgba(0, 0, 0, .42) 38%, rgba(0, 0, 0, .08) 75%);
+    pointer-events: none;
+}
+
+
+/* Frame number */
+
+#v-media #ftt .fta .num {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 3;
+    color: #fff !important;
+    font-size: 13px;
+    font-weight: 800;
+    padding: 6px 10px;
+    border: 1px solid rgba(255, 255, 255, .28);
+    border-radius: 20px;
+    background: rgba(0, 0, 0, .45);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+}
+
+
+/* Frame title and description */
+
+#v-media #ftt .fta .cap {
+    position: absolute;
+    left: 20px;
+    right: 18px;
+    bottom: 20px;
+    z-index: 3;
+    color: #fff !important;
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity .35s ease, transform .45s ease;
+}
+
+#v-media #ftt .fta.on .cap {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: .12s;
+}
+
+#v-media #ftt .fta .cap b {
+    display: block;
+    color: #fff !important;
+    font-size: clamp(16px, 1.5vw, 23px);
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+#v-media #ftt .fta .cap small {
+    display: block;
+    margin-top: 6px;
+    color: rgba(255, 255, 255, .88) !important;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* Hover interaction */
+
+#v-media #ftt .fta:hover {
+    border-color: rgba(40, 162, 255, .75);
+}
+
+#v-media #ftt .fta:focus-visible {
+    outline: 2px solid #55d6ff;
+    outline-offset: 3px;
+}
+
+
+/* ---------------------------------------------------------
+   TABLET VIEW
+   --------------------------------------------------------- */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    #v-media #ftt.ftt {
+        height: 340px;
+        min-height: 280px;
+        gap: 8px;
+    }
+    #v-media #ftt .fta,
+    #v-media #ftt .fta.on {
+        border-radius: 13px;
+    }
+    #v-media #ftt .fta.on {
+        flex: 4 1 0;
+    }
+    #v-media #ftt .fta .cap {
+        left: 12px;
+        right: 10px;
+        bottom: 14px;
+    }
+    #v-media #ftt .fta .cap b {
+        font-size: 17px;
+    }
+    #v-media #ftt .fta .cap small {
+        font-size: 11px;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE VIEW — VERTICAL SLIDING FRAMES
+   --------------------------------------------------------- */
+
+@media (max-width: 600px) {
+    #v-media #ftt.ftt {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        gap: 10px;
+        overflow: visible;
+    }
+    #v-media #ftt .fta,
+    #v-media #ftt .fta.on {
+        flex: none;
+        width: 100%;
+        min-width: 0;
+        height: 120px;
+        min-height: 120px;
+        border-radius: 13px;
+    }
+    #v-media #ftt .fta.on {
+        height: 120px;
+    }
+    #v-media #ftt .fta img {
+        transform: none;
+    }
+    #v-media #ftt .fta .cap,
+    #v-media #ftt .fta.on .cap {
+        display: block !important;
+        left: 14px;
+        right: 12px;
+        bottom: 12px;
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+    #v-media #ftt .fta .cap b {
+        font-size: 15px;
+    }
+    #v-media #ftt .fta .cap small {
+        font-size: 11px;
+    }
+    #v-media #ftt .fta .num {
+        top: 10px;
+        left: 11px;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   IMAGE VIEWER — ALL SCREEN SIZES
+   --------------------------------------------------------- */
+
+.flight-image-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 70px 20px 24px;
+    background: rgba(0, 0, 0, .96);
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+}
+
+.flight-image-modal.is-open {
+    display: flex;
+}
+
+.flight-image-modal img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: min(100%, 1200px);
+    max-height: calc(100vh - 145px);
+    max-height: calc(100svh - 145px);
+    object-fit: contain;
+    border: 1px solid rgba(40, 162, 255, .38);
+    border-radius: 12px;
+    background: #000;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, .5);
+}
+
+
+/* Viewer caption */
+
+.flight-image-caption {
+    max-width: 900px;
+    margin: 0;
+    color: #fff !important;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: center;
+}
+
+
+/* Close button */
+
+.flight-image-close {
+    position: fixed;
+    top: max(18px, env(safe-area-inset-top, 0px));
+    right: max(18px, env(safe-area-inset-right, 0px));
+    z-index: 100001;
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    color: #fff !important;
+    font-size: 32px;
+    line-height: 1;
+    border: 1px solid rgba(255, 255, 255, .55);
+    border-radius: 50%;
+    background: rgba(20, 30, 45, .85);
+    cursor: pointer;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: background .25s ease, transform .25s ease;
+}
+
+.flight-image-close:hover {
+    background: #168fe0;
+    transform: rotate(90deg);
+}
+
+body.image-viewer-open {
+    overflow: hidden;
+}
+
+
+/* Small phones */
+
+@media (max-width: 380px) {
+    #v-media #ftt .fta,
+    #v-media #ftt .fta.on {
+        height: 100px;
+        min-height: 100px;
+    }
+    .flight-image-modal {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    #v-media #ftt .fta,
+    #v-media #ftt .fta img,
+    #v-media #ftt .fta .cap {
+        transition: none !important;
+    }
+}
+
+
+/* FIX: Media images washed out in Bright Mode */
+
+[data-theme="light"] #mg .mc img,
+[data-theme="light"] #mg .mc video {
+    opacity: 1 !important;
+    filter: none !important;
+    mix-blend-mode: normal !important;
+}
+
+
+/* Remove unwanted white overlays */
+
+[data-theme="light"] #mg .mc::before,
+[data-theme="light"] #mg .mc::after {
+    opacity: 0 !important;
+    background: transparent !important;
+}
+
+
+/* Keep images clear */
+
+[data-theme="light"] #mg .mc {
+    filter: none !important;
+}
+
+
+/* =========================================================
+   UNITY SPACE — HORIZONTAL UPCOMING EVENTS TICKER
+   Placed in normal document flow directly after the navbar.
+   Uses unique classes and does not affect the hero/event-card styles.
+========================================================= */
+
+:root {
+    --us-ticker-accent: #faa308;
+    --us-ticker-bg: rgba(255, 255, 255, 0.08);
+    --us-ticker-main: #171717;
+    --us-ticker-muted: rgba(23, 23, 23, 0.68);
+    --us-ticker-line: rgba(0, 0, 0, 0.14);
+}
+
+html[data-theme="dark"] {
+    --us-ticker-accent: #28a2ff;
+    --us-ticker-bg: rgba(5, 12, 22, 0.88);
+    --us-ticker-main: #f4f8ff;
+    --us-ticker-muted: rgba(235, 244, 255, 0.68);
+    --us-ticker-line: rgba(255, 255, 255, 0.16);
+}
+
+html[data-theme="light"] {
+    --us-ticker-accent: #faa308;
+    --us-ticker-bg: rgba(255, 255, 255, 0.94);
+    --us-ticker-main: #171717;
+    --us-ticker-muted: rgba(23, 23, 23, 0.68);
+    --us-ticker-line: rgba(0, 0, 0, 0.14);
+}
+
+
+/* Ticker sits between header and main; it is NOT fixed over the hero. */
+
+.us-news-ticker {
+    position: sticky;
+    top: 72px;
+    z-index: 19;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 42px;
+    min-height: 42px;
+    margin: 0;
+    padding: 0 !important;
+    overflow: hidden;
+    box-sizing: border-box;
+    color: var(--us-ticker-main);
+    background: var(--us-ticker-bg);
+    border-bottom: 1px solid var(--us-ticker-line);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+}
+
+
+/* Fixed label on the left */
+
+.us-ticker-label {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    flex: 0 0 auto;
+    height: 100%;
+    padding: 0 13px;
+    margin: 0;
+    color: var(--us-ticker-accent);
+    background: var(--us-ticker-bg);
+    border-right: 1px solid var(--us-ticker-line);
+    font-size: 10px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.us-ticker-icon {
+    display: block;
+    width: 14px;
+    height: 14px;
+    flex: 0 0 14px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* Clipping window */
+
+.us-ticker-viewport {
+    flex: 1 1 auto;
+    min-width: 0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+/* Two identical groups travel as one continuous strip. */
+
+.us-ticker-track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    animation: usTickerScroll 30s linear infinite;
+    will-change: transform;
+}
+
+.us-ticker-group {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    width: max-content;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.us-ticker-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    gap: 9px;
+    height: 100%;
+    margin: 0;
+    padding: 0 18px;
+    white-space: nowrap;
+}
+
+.us-ticker-item::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 1px;
+    height: 17px;
+    transform: translateY(-50%);
+    background: var(--us-ticker-accent);
+    opacity: 0.55;
+}
+
+.us-ticker-dot {
+    display: block;
+    flex: 0 0 6px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--us-ticker-accent);
+    box-shadow: 0 0 7px color-mix(in srgb, var(--us-ticker-accent) 55%, transparent);
+}
+
+.us-ticker-content {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.us-ticker-content strong {
+    margin: 0;
+    padding: 0;
+    color: var(--us-ticker-accent);
+    font-size: 11px;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.us-ticker-content span {
+    margin: 0;
+    padding: 0;
+    color: var(--us-ticker-muted);
+    font-size: 10px;
+    line-height: 1;
+    font-weight: 400;
+}
+
+.us-ticker-link {
+    display: inline-block;
+    flex: 0 0 auto;
+    margin: 0 0 0 2px;
+    padding: 0;
+    color: var(--us-ticker-accent);
+    font-size: 10px;
+    line-height: 1;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.us-ticker-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.us-ticker-link:focus-visible {
+    outline: 2px solid var(--us-ticker-accent);
+    outline-offset: 4px;
+    border-radius: 2px;
+}
+
+
+/* The track moves by exactly one group's width because both groups match. */
+
+@keyframes usTickerScroll {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+.us-news-ticker:hover .us-ticker-track,
+.us-news-ticker:focus-within .us-ticker-track {
+    animation-play-state: paused;
+}
+
+
+/* Tablet and mobile */
+
+@media (max-width: 900px) {
+    .us-news-ticker {
+        top: 72px;
+        height: 40px;
+        min-height: 40px;
+    }
+    .us-ticker-item {
+        gap: 7px;
+        padding: 0 14px;
+    }
+}
+
+@media (max-width: 600px) {
+    .us-news-ticker {
+        height: 38px;
+        min-height: 38px;
+    }
+    .us-ticker-label {
+        gap: 5px;
+        padding: 0 9px;
+        font-size: 8px;
+        letter-spacing: 0.7px;
+    }
+    .us-ticker-icon {
+        width: 12px;
+        height: 12px;
+        flex-basis: 12px;
+    }
+    .us-ticker-item {
+        gap: 6px;
+        padding: 0 11px;
+    }
+    .us-ticker-content {
+        gap: 5px;
+    }
+    .us-ticker-content strong {
+        font-size: 9px;
+    }
+    .us-ticker-content span,
+    .us-ticker-link {
+        font-size: 8px;
+    }
+    .us-ticker-dot {
+        width: 5px;
+        height: 5px;
+        flex-basis: 5px;
+    }
+}
+
+
+/* Respect the visitor's reduced-motion preference. */
+
+@media (prefers-reduced-motion: reduce) {
+    .us-ticker-track {
+        animation: none !important;
+        transform: none !important;
+    }
+    .us-ticker-group[aria-hidden="true"] {
+        display: none;
+    }
+    .us-ticker-viewport {
+        overflow-x: auto;
+        scrollbar-width: thin;
+    }
+}
+
+
+/* =========================================================
+   UNITY SPACE — AIC-ADT TWO-LAYER CARDS
+   Only Explore gallery, Projects, and Flight Log.
+   ========================================================= */
+
+:root {
+    --us-card-accent: #faa308;
+}
+
+html[data-theme="dark"],
+ :root[data-theme="dark"] {
+    --us-card-accent: #28a2ff;
+}
+
+
+/* Explore gallery: preserve the existing 4:3 photo area; caption is a separate panel. */
+
+#v-home #gal {
+    align-items: start;
+}
+
+#v-home #gal figure {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    aspect-ratio: auto;
+    overflow: visible;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    transform: none;
+}
+
+#v-home #gal figure>.gi {
+    position: relative;
+    inset: auto;
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: var(--soft);
+}
+
+#v-home #gal figure>.gi img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1);
+    filter: none;
+    transition: transform .7s cubic-bezier(.2, .7, .2, 1);
+}
+
+#v-home #gal figure:hover>.gi img,
+#v-home #gal figure:focus-within>.gi img {
+    transform: scale(1.055);
+    filter: none;
+}
+
+#v-home #gal figure>figcaption,
+#v-projects .pg .pc>.cp,
+#v-flightlog .fl .fc>.cp {
+    position: relative;
+    isolation: isolate;
+    z-index: 2;
+    overflow: hidden;
+    margin: -22px 12px 0;
+    padding: 18px 20px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    color: var(--ink);
+    background: var(--bg);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, .12);
+    transition: color .45s ease, border-color .45s ease, box-shadow .45s ease;
+}
+
+#v-home #gal figure>figcaption {
+    max-width: none;
+    inset: auto;
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 600;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+}
+
+#v-home #gal figure>figcaption::before,
+#v-projects .pg .pc>.cp::before,
+#v-flightlog .fl .fc>.cp::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: var(--us-card-accent);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform .65s cubic-bezier(.22, .7, .2, 1);
+    pointer-events: none;
+}
+
+#v-home #gal figure>figcaption>span,
+#v-projects .pg .pc>.cp>*,
+#v-flightlog .fl .fc>.cp>* {
+    position: relative;
+    z-index: 1;
+    transition: color .4s ease;
+}
+
+#v-home #gal figure:hover>figcaption::before,
+#v-projects .pg .pc:hover>.cp::before,
+#v-flightlog .fl .fc:hover>.cp::before,
+#v-home #gal figure:focus-within>figcaption::before,
+#v-projects .pg .pc:focus-visible>.cp::before,
+#v-flightlog .fl .fc:focus-visible>.cp::before,
+#v-home #gal figure:active>figcaption::before,
+#v-projects .pg .pc:active>.cp::before,
+#v-flightlog .fl .fc:active>.cp::before {
+    transform: scaleY(1);
+}
+
+#v-home #gal figure:hover>figcaption,
+#v-projects .pg .pc:hover>.cp,
+#v-flightlog .fl .fc:hover>.cp,
+#v-home #gal figure:focus-within>figcaption,
+#v-projects .pg .pc:focus-visible>.cp,
+#v-flightlog .fl .fc:focus-visible>.cp {
+    color: #111;
+    border-color: var(--us-card-accent);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, .18);
+}
+
+#v-home #gal figure:hover>figcaption>span,
+#v-projects .pg .pc:hover>.cp>*,
+#v-flightlog .fl .fc:hover>.cp>*,
+#v-home #gal figure:focus-within>figcaption>span,
+#v-projects .pg .pc:focus-visible>.cp>*,
+#v-flightlog .fl .fc:focus-visible>.cp>* {
+    color: #111;
+}
+
+
+/* Projects: separate image frame from its content panel. */
+
+#v-projects .pg .pc {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: visible;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    transform: none;
+}
+
+#v-projects .pg .pc>.fi {
+    position: relative;
+    flex: 0 0 auto;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: var(--soft);
+}
+
+#v-projects .pg .pc>.fi img,
+#v-projects .pg .pc>.fi video {
+    transition: transform .7s cubic-bezier(.2, .7, .2, 1);
+}
+
+#v-projects .pg .pc:hover>.fi img,
+#v-projects .pg .pc:hover>.fi video,
+#v-projects .pg .pc:focus-visible>.fi img,
+#v-projects .pg .pc:focus-visible>.fi video {
+    transform: scale(1.055);
+}
+
+#v-projects .pg .pc>.cp {
+    flex: 1 0 auto;
+}
+
+
+/* Flight Log: apply only to the four cards in this page. */
+
+#v-flightlog .fl .fc {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: visible;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    transform: none;
+}
+
+#v-flightlog .fl .fc>.fi {
+    position: relative;
+    flex: 0 0 auto;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: var(--soft);
+}
+
+#v-flightlog .fl .fc>.fi img,
+#v-flightlog .fl .fc>.fi video {
+    transition: transform .7s cubic-bezier(.2, .7, .2, 1);
+}
+
+#v-flightlog .fl .fc:hover>.fi img,
+#v-flightlog .fl .fc:hover>.fi video,
+#v-flightlog .fl .fc:focus-visible>.fi img,
+#v-flightlog .fl .fc:focus-visible>.fi video {
+    transform: scale(1.055);
+}
+
+#v-flightlog .fl .fc>.cp {
+    flex: 1 0 auto;
+}
+
+
+/* Theme-specific panel surface. */
+
+html[data-theme="dark"] #v-home #gal figure>figcaption,
+html[data-theme="dark"] #v-projects .pg .pc>.cp,
+html[data-theme="dark"] #v-flightlog .fl .fc>.cp {
+    background: #0a1423;
+    color: #eef7ff;
+    border-color: rgba(40, 162, 255, .28);
+}
+
+
+/* Touch and reduced-motion behaviour. */
+
+@media (hover: none) {
+    #v-home #gal figure>figcaption,
+    #v-projects .pg .pc>.cp,
+    #v-flightlog .fl .fc>.cp {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, .12);
+    }
+}
+
+@media (max-width: 700px) {
+    #v-home #gal figure>figcaption,
+    #v-projects .pg .pc>.cp,
+    #v-flightlog .fl .fc>.cp {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 16px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #v-home #gal figure>.gi img,
+    #v-home #gal figure>figcaption,
+    #v-home #gal figure>figcaption::before,
+    #v-projects .pg .pc>.fi img,
+    #v-projects .pg .pc>.fi video,
+    #v-projects .pg .pc>.cp,
+    #v-projects .pg .pc>.cp::before,
+    #v-flightlog .fl .fc>.fi img,
+    #v-flightlog .fl .fc>.fi video,
+    #v-flightlog .fl .fc>.cp,
+    #v-flightlog .fl .fc>.cp::before {
+        transition: none !important;
+    }
 }
