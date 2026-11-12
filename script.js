@@ -1429,7 +1429,7 @@ document.addEventListener("DOMContentLoaded", () => {
             );
         });
     }, {
-        threshold: 0.45
+        threshold: 0.75
     });
 
     cards.forEach(card => observer.observe(card));

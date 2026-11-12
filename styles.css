@@ -91,6 +91,34 @@ h3 {
     margin: 0 0 14px;
 }
 
+.tag-line {
+    font-size: 45px;
+    font-weight: 700;
+    color: var(--ot);
+    margin: 0 0 14px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid var(--ot);
+    width: 0;
+    animation: typing 4s steps(30, end) infinite alternate, blink .7s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 20ch;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
 .btn {
     display: inline-block;
     background: var(--red);
@@ -6295,11 +6323,23 @@ html[data-theme="dark"],
     position: absolute;
     inset: 0;
     z-index: 0;
-    background: var(--us-card-accent);
+    background: linear-gradient( to top, var(--us-card-accent) 0%, #ffffff 100%);
     transform: scaleY(0);
     transform-origin: bottom;
     transition: transform .65s cubic-bezier(.22, .7, .2, 1);
     pointer-events: none;
+}
+
+
+/* Dark theme: blue accent fades into black; bright theme keeps white. */
+
+html[data-theme="dark"] #v-home #gal figure>figcaption::before,
+html[data-theme="dark"] #v-projects .pg .pc>.cp::before,
+html[data-theme="dark"] #v-flightlog .fl .fc>.cp::before,
+:root[data-theme="dark"] #v-home #gal figure>figcaption::before,
+:root[data-theme="dark"] #v-projects .pg .pc>.cp::before,
+:root[data-theme="dark"] #v-flightlog .fl .fc>.cp::before {
+    background: linear-gradient(to top, var(--us-card-accent) 0%, #000000 100%);
 }
 
 #v-home #gal figure>figcaption>span,
@@ -6502,7 +6542,7 @@ html[data-theme="dark"] #v-flightlog .fl .fc>.cp {
 #v-projects .pg .pc.is-scroll-active>.cp,
 #v-flightlog .fl .fc.is-scroll-active>.cp {
     color: #111;
-    border-color: var(--us-card-accent);
+    border-color: #0538c2;
     box-shadow: 0 14px 32px rgba(0, 0, 0, .18);
 }
 
