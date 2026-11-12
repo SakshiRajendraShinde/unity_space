@@ -1403,3 +1403,34 @@
     // =====================================================
 
 })();
+
+
+/* MOBILE: Automatically fill card accent color on scroll */
+document.addEventListener("DOMContentLoaded", () => {
+    const mobileView = window.matchMedia(
+        "(max-width: 900px), (hover: none)"
+    );
+
+    const cardSelectors = [
+        "#v-home #gal figure",
+        "#v-projects .pg .pc",
+        "#v-flightlog .fl .fc"
+    ];
+
+    const cards = document.querySelectorAll(cardSelectors.join(","));
+
+    if (!("IntersectionObserver" in window) || !mobileView.matches) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            entry.target.classList.toggle(
+                "is-scroll-active",
+                entry.isIntersecting
+            );
+        });
+    }, {
+        threshold: 0.45
+    });
+
+    cards.forEach(card => observer.observe(card));
+});
