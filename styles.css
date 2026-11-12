@@ -6472,3 +6472,53 @@ html[data-theme="dark"] #v-flightlog .fl .fc>.cp {
         transition: none !important;
     }
 }
+
+
+/* =========================================================
+   RESPONSIVE FIX 01 — MOBILE HERO CONTENT CLEARANCE
+   Keeps the existing fixed navbar, hero media, typography and layout intact.
+   ========================================================= */
+
+@media (max-width: 600px) {
+    #v-home .hero>.w.g {
+        margin-top: calc(72px + env(safe-area-inset-top, 0px) + 16px);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE FIX 02 — TOUCH VIEWPORT CARD PANEL FILL
+   Reuses the existing accent-fill pseudo-element and transition.
+   Only the content panel is activated; image frames are not changed.
+   ========================================================= */
+
+#v-home #gal figure.is-scroll-active>figcaption::before,
+#v-projects .pg .pc.is-scroll-active>.cp::before,
+#v-flightlog .fl .fc.is-scroll-active>.cp::before {
+    transform: scaleY(1);
+}
+
+#v-home #gal figure.is-scroll-active>figcaption,
+#v-projects .pg .pc.is-scroll-active>.cp,
+#v-flightlog .fl .fc.is-scroll-active>.cp {
+    color: #111;
+    border-color: var(--us-card-accent);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, .18);
+}
+
+#v-home #gal figure.is-scroll-active>figcaption>span,
+#v-projects .pg .pc.is-scroll-active>.cp>*,
+#v-flightlog .fl .fc.is-scroll-active>.cp>* {
+    color: #111;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #v-home #gal figure.is-scroll-active>figcaption,
+    #v-home #gal figure.is-scroll-active>figcaption::before,
+    #v-projects .pg .pc.is-scroll-active>.cp,
+    #v-projects .pg .pc.is-scroll-active>.cp::before,
+    #v-flightlog .fl .fc.is-scroll-active>.cp,
+    #v-flightlog .fl .fc.is-scroll-active>.cp::before {
+        transition: none !important;
+    }
+}
